@@ -1,0 +1,148 @@
+Use backbone.js and datatables.js
+
+http://www.codeproject.com/Articles/797899/BackBone-Tutorial-Part-CRUD-Operations-on-Backbone
+https://www.datatables.net/manual/data
+backbone
+
+Teacher
+	-id
+	-name
+	-isAdmin
+	-classes managed
+	-encounters
+	-student groups()
+	-students()
+
+Class
+	-id
+	-name
+	-encounter list
+	-groups
+	-students
+	-periodNumber
+
+Group
+	-id
+	-name
+	-members
+
+Student
+	-id
+	-login name / avatar
+	-first name
+	-last name
+	-password
+	
+	-total XP()
+	-encounter history
+
+Encounter
+	-id
+	-name
+	-max XP
+	-timestamp entered
+	-timestamp earned
+	-training, camping, adventuring, ad-hoc
+	-optional reason field for ad hoc
+
+Display
+	student
+	group
+	class
+	encounters
+	-show xp by category
+	-show by student
+	-show by group
+	-show by class
+	-show by teacher
+	-sort by group
+	-sort by last name
+	-sort by XP
+
+
+UI/UX
+
+Logged In User
+
+Manage Teacher(s)
+	-if current teacher has adminRights, show all teachers, otherwise, just show current teacher
+	-create teacher
+		-generate id; enter name, adminRights (only allow user to select this if they have adminRights)
+		-attach existing class
+		-create empty class
+	-read teacher
+		-show id, name, adminRights, classes
+	-update teacher
+		-attach existing class
+		-create empty class
+		-move class to different teacher
+		-delete class
+		-edit name, adminRights (only allowed if user has adminRights)
+	
+	-delete teacher
+
+Manage Classes
+	-shows classes grouped into classes per user. if admin, shows all teachers, otherwise just shows the current user
+	-create class
+		-generate id
+		-enter name
+		-enter periodNumber
+		-attach existing encounters
+		-create new encounters
+		-edit encounter
+		-attach existing student(s)
+		-create new student
+		-edit student
+		-attach existing group(s)
+		-create new group
+		-edit group
+	-read class
+		-show id, name, encounters, students, groups, periodNumber
+	-update class
+		-edit name
+		-edit periodNumber
+		-attach existing encounters
+		-create new encounter
+		-edit encounter
+		-attach existing student(s)
+		-create new student
+		-edit student
+		-attach existing group(s)
+		-create new group
+		-edit group
+	-delete class
+
+Manage Groups
+	-sort by teacher, then classes
+	-create group
+		-generate id
+		-enter name
+		-add member(s)
+		-remove member(s)
+	-read group
+		-show members, name, id
+	-update group
+		-add member
+		-remove member
+		-rename
+	-delete group
+
+Manage Students
+	-create student
+		-generate id
+		-enter avatar/login
+		-assign to class(es)
+		-assign to group(s)
+		-enter encounter history data for given classes/groups
+	-read student
+		-show id, avatar/login (maybe not password if there is one...)
+		-show groups
+		-show classes
+		-show encounter history data for given classes/groups
+	-
+*batch add results for an encounter
+
+level manager
+	-min XP for the given level
+	-level title "adventurer, squire, padawan, noob, etc
+	-etc?
