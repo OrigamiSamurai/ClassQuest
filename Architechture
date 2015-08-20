@@ -1,3 +1,16 @@
+NOTES
+-drop php Slim-2.6.2 framework into /api/ folder (.htaccess file and Slim folder)
+-create index.php in the /api/ folder
+-use Slim documentation to route requests
+
+
+Encounter
+-the encounter presenting one or more students
+
+EncounterResult
+-the individual result of the encounter per student
+-1 or more per encounter
+
 Use backbone.js and datatables.js
 
 http://www.codeproject.com/Articles/797899/BackBone-Tutorial-Part-CRUD-Operations-on-Backbone

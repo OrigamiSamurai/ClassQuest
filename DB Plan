@@ -1,0 +1,10 @@
+DB Plan
+
+Encounters
+-name, id, xp type, etc
+
+XPAward
+-maps to an encounter
+
+If I need to fetch an encounter, I can manipulate the data on the API side to grab them as necessary
+

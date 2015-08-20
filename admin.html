@@ -7,8 +7,8 @@
     <link rel="stylesheet" type="text/css" href="javascript/lib/DataTables-1.10.8/css/jquery.dataTables.css"/>
   </head>
   <body>
-    <div>Management console goes here</div>
-    <div>Step number 1, show a student management console</div>
+
+    <div id="xp-container"></div>
 
     <table id="student-table">
     </table>
@@ -17,11 +17,25 @@
     <script src="javascript/lib/json2.js"></script>
     <script src="javascript/lib/underscore-min.js"></script>
     <script src="javascript/lib/backbone-min.js"></script>
+    <script src="javascript/lib/backbone.epoxy.min.js"></script>
+    
     <script type="text/javascript" src="javascript/lib/DataTables-1.10.8/js/jquery.dataTables.js"></script>
 
-    <script src="javascript/encounters.js" type="text/javascript"></script>
-    <script src="javascript/students.js" type="text/javascript"></script>
+    <script src="javascript/app/classquestconfig.js" type="text/javascript"></script>
 
-    <script src="javascript/app.js" type="text/javascript"></script>
+
+<!--
+    <script src="javascript/app/models/Encounter.js" type="text/javascript"></script>
+    <script src="javascript/app/collections/EncounterCollection.js" type="text/javascript"></script>
+    
+    <script src="javascript/app/students.js" type="text/javascript"></script>
+-->
+
+    <script src="javascript/app/models/XP.js" type="text/javascript"></script>
+    <script src="javascript/app/collections/XPCollection.js" type="text/javascript"></script>
+    <script src="javascript/app/views/XPView.js" type="text/javascript"></script>
+    <script src="javascript/app/views/XPCollectionView.js" type="text/javascript"></script>
+
+    <script src="javascript/app/app.js" type="text/javascript"></script>
   </body>
   </html>
