@@ -13,5 +13,9 @@ div {
 }
 
 .unsaved {
-	border-color: gray;
+	border-color: red;
+}
+
+input[type=button] {
+	margin: 5px 0px;
 }
