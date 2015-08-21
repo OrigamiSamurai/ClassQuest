@@ -1,0 +1,40 @@
+TODO:
+
+- Test fetch of XPCollection to ensure that models are parsed correctly
+- Investigate using backbone relational to model mapping of xp to xpcollection
+
+- BindParams using PDO on the queries
+- Remove parse on xp
+- Remove parse on xpcollection
+
+**************
+API GUIDELINES
+**************
+- POST
+  - on success
+    - header: 201 code (indicates successful creation of the resource)
+    - body: object created
+  - on error
+    - header: 400 code
+    - body: error object
+- GET
+  - on success
+    - header: 200 code
+    - body: object requested
+  - on error
+    - header: 400 code
+    - body: error object
+- PUT
+  - on success
+    - header: 200/204 (200 since we're returning the object no content, success)
+    - body: object updated (since we'll be using timestamps, etc)
+  - on error
+    - header: 400 code
+    - body: error object
+- DELETE
+  - on success
+    - header: 204 (no content, success)
+    - body: empty
+  - on error
+    - header: 400 code
+    - body: error object
