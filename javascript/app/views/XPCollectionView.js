@@ -8,7 +8,7 @@ var XpCollectionView = Backbone.View.extend({
 	},
 
 	render: function() {
-
+		return this;
 	},
 
 });

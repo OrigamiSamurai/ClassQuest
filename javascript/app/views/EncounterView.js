@@ -1,15 +1,39 @@
 var EncounterView = Backbone.Epoxy.View.extend({
-	tagname: "li",
+	model: Encounter,
+
+  tagname: "li",
 
 	initialize: function(options){
-  	_.bindAll(this, 'render', 'renderXp', 'onSubmit');// onsubmits are currently used for saving lower level items
-    this.model.bind('change', this.render);
-    this.model.bind('reset', this.render);
-    this.model.bind('add:xps', this.renderXp);  
+  	_.bindAll(this, 'render', 'renderXp', 'onSubmit', 'onCreated', 'onError');// onsubmits are currently used for saving lower level items
+    //this.model.bind('change', this.render);
+    //this.model.bind('reset', this.render);
+    this.model.bind('add:xps', this.renderXp); 
+
+    this.modAttr = this.model.attributes; 
+  },
+
+  computeds: {
+    xpTypes: {
+      get: function() {return [ "Random Encounter" , "Guard Duty" , "Adventuring" , "Scullery Duty" , "Training" ];}
+    },
+    date: {
+      deps: ["date"],
+      get: function(date) {
+        // prettify the date
+        return date+" ";//modelDate.toLocaleDateString("en-US");
+      },
+      set: function(userDate) {
+        // parse the date
+        return {date: Date.parse(userDate)};
+      }
+    }
   },
 
   bindings: {
-    "input.encounterName":"value:name"
+    "input.encounterName":"value:name",//,events:['keyup']",
+    "input.maxXp":"value:maxXp",//,events:['keyup']",
+    "select.xpType":"value:typeId,options:xpTypes,optionsDefault:xpTypes[0]",
+    "input.encounterDate":"value:customDate"
   },
 
   events: {
@@ -19,24 +43,24 @@ var EncounterView = Backbone.Epoxy.View.extend({
   },
 
   render: function(){
-  	
-  	console.log('render encounter view');
-
+  	console.log(this.model.get('customDate'));
   	this.$el.html(
     	"ID: "+ (this.modAttr.id ? this.modAttr.id : "") +
-      "<br>Name: <input type=\"text\" class=\"encounterName\" value=\""+this.modAttr.name+"\">"+
-      "<br>Max XP award: "+this.modAttr.maxXp+
-      "<br>Type ID: "+this.modAttr.typeId+
-      "<br>Encountered Date: "+formatDate(this.modAttr.date)+
+      "<br>Name: <input type=\"text\" class=\"encounterName\""+ //this.modAttr.name+"\">"+
+      "<br>Max XP award: <input type=\"text\" class=\"maxXp\">"+
+      "<br>Type: <select class=\"xpType\"></select>"+
+      "<br>Encountered Date: <input type=\"text\" class=\"date\">"+
       "<br>XP Awards:"+
       "<br><input type=\"button\" value=\"Create XP\" class=\"createXp\" />"+
-      	"Amount: <input type=\"button\" value=\"\" class=\"amount\" />"+
+      	"Amount: <input type=\"text\" value=\"\" class=\"amount\" />"+
       "<br><ol class=\"encounterXpView\"></ol>"+
     	"<br>Created Date: "+formatDate(this.modAttr.createdDate)+
       "<br>Last Updated: "+formatDate(this.modAttr.updatedDate)+
     	"<br><input type=\"button\" value=\"Save\" class=\"saveButton\" />"+
-    	"<br><input type=\"button\" value=\"Delete\" class=\"deleteButton\" />"
+    	"<br><input type=\"button\" value=\"Delete\" class=\"deleteButton\" /><span class=\"maxXp\"></span>"
     );
+    this.applyBindings();
+        console.log(this.model.get('customDate'));
 
     if (!this.model.hasOwnProperty("id")) {
       this.$el.addClass("unsaved");
@@ -44,6 +68,10 @@ var EncounterView = Backbone.Epoxy.View.extend({
     else {
       this.$el.removeClass("unsaved");
     }
+
+    this.applyBindings();
+
+    return this;
   },
 
   onSubmit: function() {
@@ -55,8 +83,7 @@ var EncounterView = Backbone.Epoxy.View.extend({
   },
 
   onCreated: function(xp, response) {
-		console.log("Encounter submitted successfully.", xp, response);
-		this.model.attributes.xps.add(xp);
+    this.model.attributes.xps.add(xp);
 	},
 
 	onError: function(xp, response) {
@@ -64,13 +91,25 @@ var EncounterView = Backbone.Epoxy.View.extend({
 	},
 
   renderXp: function(model) {
-  	var encounterXpView = new EncounterXpView({model:model});
-		this.$el.find('.encounterXpView').append(encounterXpView.el);
+    var encounterXpView = new EncounterXpView({model:model});
+		this.$el.find('.encounterXpView').append(encounterXpView.render().$el);
   },
 
   delete: function() {
   	this.model.destroy();
   	this.remove();
+  },
+
+  save: function() {
+    //this.model.set({name:$('.encounterName').val()});
+    this.model.save({}, { //name:$('.encounterName').val()
+      success: function (model, response, options) {
+          model.set({updatedDate:response.updatedDate});
+      },
+      error: function (model, xhr, options) {
+          console.log("Something went wrong while saving the model");
+      }
+    });
   }
 
 });

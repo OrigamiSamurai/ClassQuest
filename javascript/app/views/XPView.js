@@ -31,6 +31,8 @@ var XpView = Backbone.Epoxy.View.extend({
     else {
       this.$el.removeClass("unsaved");
     }
+
+    return this;
   },
 
   delete: function() {

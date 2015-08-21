@@ -9,6 +9,8 @@ function formatDate(date) {
   return date.getMonth()+1 + "/" + date.getDate() + "/" + date.getFullYear() + "  " + strTime;
 }
 
+var xPTypes = [ "Random Encounter" , "Guard Duty" , "Adventuring" , "Scullery Duty" , "Training" ]
+
 //var xpList = new XpCollectionView();
 
 var encounters = new EncounterCollection();

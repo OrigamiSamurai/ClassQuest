@@ -9,6 +9,8 @@ var EncounterXpView = Backbone.Epoxy.View.extend({
   	_.bindAll(this, 'render');// onsubmits are currently used for saving lower level items
     this.model.bind('change', this.render);
     this.model.bind('reset', this.render);
+
+    this.attr = this.model.attributes;
   },
 
   bindings: {
@@ -21,6 +23,7 @@ var EncounterXpView = Backbone.Epoxy.View.extend({
   },
 
   render: function() {
+    console.log("rendering...", this);
     this.$el.html(
     	"ID: "+ (this.attr.id ? this.attr.id : "") +
       "<br>Amount: <input type=\"text\" class=\"xpAmount\" value=\""+this.attr.amount+"\">"+
@@ -34,6 +37,8 @@ var EncounterXpView = Backbone.Epoxy.View.extend({
     else {
       this.$el.removeClass("unsaved");
     }
+
+    return this;
   },
 
   delete: function() {
@@ -42,7 +47,6 @@ var EncounterXpView = Backbone.Epoxy.View.extend({
   },
 
 	save: function() {
-    var self = this;
     this.model.save({}, {
 	    success: function (model, response, options) {
           model.set({updatedDate:response.updatedDate});
