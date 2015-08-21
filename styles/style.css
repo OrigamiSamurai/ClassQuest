@@ -11,3 +11,7 @@ div {
 .top-level-container {
 	margin: 10px 10px;
 }
+
+.unsaved {
+	border-color: gray;
+}

@@ -3,10 +3,6 @@ var XPCollection = Backbone.Collection.extend({
 	
 	url: 'http://www.kreutzlandry.com/classquest/api/xps',
 
-	parse: function(response, xhr) {		
-		return response.data;
-	},
-
 	fetchSuccess: function(collection, response) {
 		console.log("XPCollection fetch successful", response);
 		console.log("Models: ", collection.models);
