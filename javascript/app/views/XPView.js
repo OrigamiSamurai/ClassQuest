@@ -1,7 +1,9 @@
+
 var XpView = Backbone.Epoxy.View.extend({
-  tagname: 'li',
+/*  tagname: 'li',
 
   initialize: function(options){
+    console.log('xp view initialized');
   },
 
   bindings: {
@@ -51,4 +53,6 @@ var XpView = Backbone.Epoxy.View.extend({
 	    }
   	});
   }
+
+*/
 });

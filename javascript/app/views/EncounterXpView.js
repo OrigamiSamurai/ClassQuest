@@ -5,8 +5,9 @@ var EncounterXpView = Backbone.Epoxy.View.extend({
 
 	initialize: function(options){
 
-  	_.bindAll(this, 'render');// onsubmits are currently used for saving lower level items
+  	_.bindAll(this, 'render', 'renderId');// onsubmits are currently used for saving lower level items
     this.model.bind('reset', this.render);
+    this.model.bind('change:id', this.renderId);
 
     this.attr = this.model.attributes;
   },
@@ -23,7 +24,7 @@ var EncounterXpView = Backbone.Epoxy.View.extend({
   render: function() {
     console.log("rendering xp "+this.model.id+" for encounter "+this.model.attributes.encounter.id);
     this.$el.html(
-    	"ID: "+ (this.attr.id ? this.attr.id : "") +
+    	"ID: <span class=\"xpId\">"+ (this.attr.id ? this.attr.id : "") + '</span>'+
       "<br>Amount: <input type=\"text\" class=\"xpAmount\" value=\""+this.attr.amount+"\">"+
     	"<br><input type=\"button\" value=\"Save\" class=\"saveButton\" />"+
     	"<br><input type=\"button\" value=\"Delete\" class=\"deleteButton\" />"
@@ -38,6 +39,11 @@ var EncounterXpView = Backbone.Epoxy.View.extend({
     }
 
     return this;
+  },
+
+  renderId: function() {
+    this.$el.find('span.xpId').html(this.model.attributes.id);
+    this.$el.removeClass('unsaved');
   },
 
   delete: function() {

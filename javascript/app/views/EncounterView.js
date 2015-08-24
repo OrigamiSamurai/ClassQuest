@@ -4,7 +4,7 @@ var EncounterView = Backbone.Epoxy.View.extend({
   tagname: "li",
 
 	initialize: function(options){
-  	_.bindAll(this, 'render', 'renderXp', 'onSubmit', 'onCreated', 'onError');// onsubmits are currently used for saving lower level items
+  	_.bindAll(this, 'render', 'renderXp', 'onSubmit', 'onCreated', 'onError', 'renderDate');// onsubmits are currently used for saving lower level items
     this.model.bind('add:xps', this.renderXp); 
 
     this.modAttr = this.model.attributes; 
@@ -53,7 +53,7 @@ var EncounterView = Backbone.Epoxy.View.extend({
         "</div>"+
     	"</div>"+
       "<br>Created Date: "+formatDate(this.modAttr.createdDate)+
-      "<br>Last Updated: "+formatDate(this.modAttr.updatedDate)+
+      "<br>Last Updated: <span class=\"updatedDate\">"+formatDate(this.modAttr.updatedDate)+"</span>"+
     	"<br><input type=\"button\" value=\"Save\" class=\"saveButton\" />"+
     	"<br><input type=\"button\" value=\"Delete\" class=\"deleteButton\" /><span class=\"maxXp\"></span>"
     );
@@ -66,13 +66,13 @@ var EncounterView = Backbone.Epoxy.View.extend({
       this.$el.removeClass("unsaved");
     }
 
-    
-
     return this;
   },
 
   onSubmit: function() {
-  	var xp = new Xp({amount:parseInt(this.$el.find('.amount').val()), typeId: this.model.typeId, encounter:this.model});
+  	console.log('submitted new xp');
+    var xp = new Xp({amount:parseInt(this.$el.find('.amount').val()), typeId: this.model.typeId, encounter:this.model});
+    console.log('new xp created',xp);
     xp.save({}, {
 	    success: this.onCreated,
 	    error: this.onError
@@ -80,7 +80,11 @@ var EncounterView = Backbone.Epoxy.View.extend({
   },
 
   onCreated: function(xp, response) {
+    console.log('new xp on created callback fired',xp,response);
+    console.log('adding xp to encounter',xp);
+    console.log('xps in this encounter before',this.model.attributes.xps);
     this.model.attributes.xps.add(xp);
+    console.log('xps in this encounter after',this.model.attributes.xps);
 	},
 
 	onError: function(xp, response) {
@@ -88,8 +92,13 @@ var EncounterView = Backbone.Epoxy.View.extend({
 	},
 
   renderXp: function(model) {
+    console.log('render xp - create new view and add it');
     var encounterXpView = new EncounterXpView({model:model});
-		this.$el.find('.encounterXpContainer').append(encounterXpView.render().$el);
+    this.$el.find('.encounterXpContainer').append(encounterXpView.render().$el);
+  },
+
+  renderDate: function() {
+    this.$el.find('span.updatedDate').html(formatDate(this.model.attributes.updatedDate));
   },
 
   delete: function() {
@@ -98,10 +107,11 @@ var EncounterView = Backbone.Epoxy.View.extend({
   },
 
   save: function() {
-    //this.model.set({name:$('.encounterName').val()});
+    self = this;
     this.model.save({}, { //name:$('.encounterName').val()
       success: function (model, response, options) {
           model.set({updatedDate:response.updatedDate});
+          self.renderDate();
       },
       error: function (model, xhr, options) {
           console.log("Something went wrong while saving the model");
