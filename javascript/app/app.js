@@ -32,6 +32,21 @@ var quests = new QuestCollection();
 var questsView = new QuestCollectionView({model:quests});
 quests.fetch();
 
+var guilds = new GuildCollection();
+var guildsView = new GuildCollectionView({model:guilds});
+guilds.fetch();
+
+var adventurers = new AdventurerCollection();
+var adventurersView = new AdventurerCollectionView({model:adventurers});
+adventurers.fetch();
+
+var encounters = new EncounterCollection();
+var encountersView = new EncounterCollectionView({model:encounters});
+encounters.fetch();
+
+var achievements = new AchievementCollection();
+var achievementsView = new AchievementCollectionView({model:achievements});
+achievements.fetch();
 
 // backbone - fetch all the items and display them
 

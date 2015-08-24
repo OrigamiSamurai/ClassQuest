@@ -8,23 +8,20 @@
   </head>
   <body>
 
-    <h1>Edit Quests (classes)</h1>
+    <h1>Quests</h1>
     <div id="QuestContainer"></div>
 
-    <h1>Guilds (student groups)</h1>
+    <h1>Guilds</h1>
     <div id="GuildContainer"></div>
 
-    <h1>Adventurers (students)</h1>
+    <h1>Adventurers</h1>
     <div id="AdventurerContainer"></div>
 
-    <h1>Encounters (assignments) </h1>
+    <h1>Encounters</h1>
     <div id="EncounterContainer"></div>
 
-    <h1>XPs (grades) </h1>
-    <div id="EncounterContainer"></div>
-
-    <h1>Loot (achievements)</h1>
-    <div id="LottContainer">To do: implement models/api/DB</div>
+    <h1>Achievements</h1>
+    <div id="AchievementContainer"></div>
 
 
     <script src="javascript/lib/jquery-1.11.3.min.js"></script>
@@ -54,6 +51,11 @@
     <script src="javascript/app/views/EncounterXpView.js" type="text/javascript"></script>
     <script src="javascript/app/views/EncounterCollectionView.js" type="text/javascript"></script>
 
+    <script src="javascript/app/models/Achievement.js" type="text/javascript"></script>
+    <script src="javascript/app/collections/AchievementCollection.js" type="text/javascript"></script>
+    <script src="javascript/app/views/AchievementView.js" type="text/javascript"></script>
+    <script src="javascript/app/views/AchievementCollectionView.js" type="text/javascript"></script>
+
     <script src="javascript/app/models/Adventurer.js" type="text/javascript"></script>
     <script src="javascript/app/collections/AdventurerCollection.js" type="text/javascript"></script>
     <script src="javascript/app/views/AdventurerView.js" type="text/javascript"></script>
@@ -69,6 +71,9 @@
     <script src="javascript/app/views/QuestView.js" type="text/javascript"></script>
     <script src="javascript/app/views/QuestCollectionView.js" type="text/javascript"></script>
     
+    <script src="javascript/app/models/AchievementCertificate.js" type="text/javascript"></script>
+    <script src="javascript/app/collections/AchievementCertificateCollection.js" type="text/javascript"></script>    
+
     <script src="javascript/app/models/QuestLicense.js" type="text/javascript"></script>
     <script src="javascript/app/collections/QuestLicenseCollection.js" type="text/javascript"></script>
     <!--<script src="javascript/app/views/QuestLicenseView.js" type="text/javascript"></script>

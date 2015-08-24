@@ -4,8 +4,11 @@ var AdventurerView = Backbone.Epoxy.View.extend({
   tagname: "li",
 
 	initialize: function(options){
-  	_.bindAll(this, 'render', 'renderXp', 'renderDate');// onsubmits are currently used for saving lower level items
+  	_.bindAll(this, 'render', 'renderXp');// onsubmits are currently used for saving lower level items
     this.model.bind('add:xps', this.renderXp);
+    this.model.bind('add:quests', this.renderXp);
+    this.model.bind('add:guilds', this.renderXp);
+    this.model.bind('add:achievements', this.renderXp);
 
     this.modAttr = this.model.attributes; 
   },
@@ -21,24 +24,28 @@ var AdventurerView = Backbone.Epoxy.View.extend({
   events: {
   	"click .deleteButton": "delete",
   	"click .saveButton": "save",
-  	"click .createXp": "onSubmit",
   },
 
   render: function(){
-    var prettyDate = this.modAttr.date.getMonth()+'/'+this.modAttr.date.getDate()+'/'+this.modAttr.date.getFullYear();
   	this.$el.html(
-    	"ID: "+ (this.modAttr.id ? this.modAttr.id : "") +
       "<br>First: <input type=\"text\" class=\"firstName\""+
       "<br>Last: <input type=\"text\" class=\"lastName\">"+
       "<br>Login: <input type=\"text\" class=\"login\">"+
       "<br>Password: <input type=\"text\" class=\"password\">"+
       "<br>Current XP: <span class=\"currentXp\"></span>"+
       "<br>XP Awards:"+
-      "<div class=\"adventurerXpContainer\">"+
+      "<div class=\"adventurerXps\">"+
     	"</div>"+
-      "<br>Created Date: "+formatDate(this.modAttr.createdDate)+
-      "<br>Last Updated: <span class=\"updatedDate\">"+formatDate(this.modAttr.updatedDate)+"</span>"+
-    	"<br><input type=\"button\" value=\"Save\" class=\"saveButton\" />"+
+    	"<br>Quests: "+
+      "<div class=\"adventurerQuests\">"+
+      "</div>"+
+      "<br>Guilds: "+
+      "<div class=\"adventurerGuilds\">"+
+      "</div>"+
+      "<br>Achievements: "+
+      "<div class=\"adventurerAchievements\">"+
+      "</div>"+
+      "<br><input type=\"button\" value=\"Save\" class=\"saveButton\" />"+
     	"<br><input type=\"button\" value=\"Delete\" class=\"deleteButton\" /><span class=\"maxXp\"></span>"
     );
     this.applyBindings();
@@ -53,13 +60,24 @@ var AdventurerView = Backbone.Epoxy.View.extend({
     return this;
   },
 
-  renderXp: function(model) {
+  renderQuest: function(model) {
     var adventurerXpView = new EncounterXpView({model:model});
-    this.$el.find('.adventurerXpContainer').append(adventurerXpView.render().$el);
+    this.$el.find('.adventurerQuests').append(adventurerQuestView.render().$el);
   },
 
-  renderDate: function() {
-    this.$el.find('span.updatedDate').html(formatDate(this.model.attributes.updatedDate));
+  renderXp: function(model) {
+    var adventurerXpView = new EncounterXpView({model:model});
+    this.$el.find('.adventurerXps').append(adventurerXpView.render().$el);
+  },
+
+  renderGuild: function(model) {
+    var adventurerXpView = new EncounterXpView({model:model});
+    this.$el.find('.adventurerGuilds').append(adventurerGuildView.render().$el);
+  },
+
+  renderAchievement: function(model) {
+    var adventurerXpView = new EncounterXpView({model:model});
+    this.$el.find('.adventurerAchievements').append(adventurerAchievementView.render().$el);
   },
 
   delete: function() {

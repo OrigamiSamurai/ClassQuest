@@ -7,11 +7,9 @@ var Adventurer = Backbone.RelationalModel.extend({
 		questLicenses: [],
 		guildMemberships: [],
 		xps: [],
-		loots: [],
+		achievementCertificates: [],
 		level: 1,
-		currentXp: 0,
-		createdDate: new Date(),
-		updatedDate: new Date()
+		currentXp: 0
 	},
 
 	initialize: function() {
@@ -59,10 +57,10 @@ var Adventurer = Backbone.RelationalModel.extend({
 		},
 		{
 			type: Backbone.HasMany,
-			key: 'loots',
-			relatedModel: 'Loot',
+			key: 'achievementCertificates',
+			relatedModel: 'AchievementCertificate',
 			includeInJSON: 'id',
-			collectionType: 'LootCollection',
+			collectionType: 'AchievementCertificateCollection',
 			autoFetch: true,
 			reverseRelation: {
 				key: 'adventurer',
@@ -80,13 +78,6 @@ var Adventurer = Backbone.RelationalModel.extend({
 
     this.currentXp = newXpTotal;
 	},
-
-  parse: function(response) {
-      response.date = new Date(response.date);
-      response.createdDate = new Date(response.createdDate);
-      response.updatedDate = new Date(response.updatedDate);
-      return response;
-  },
 
   urlRoot: 'http://www.kreutzlandry.com/classquest/api/adventurers'
 });

@@ -5,9 +5,8 @@ var QuestView = Backbone.Epoxy.View.extend({
 
 	initialize: function(options){
 
-  	_.bindAll(this, 'render', 'renderId');// onsubmits are currently used for saving lower level items
+  	_.bindAll(this, 'render');// onsubmits are currently used for saving lower level items
     this.model.bind('reset', this.render);
-    this.model.bind('change:id', this.renderId);
 
     this.attr = this.model.attributes;
   },
@@ -27,23 +26,17 @@ var QuestView = Backbone.Epoxy.View.extend({
       "Period: <input type=\"text\" class=\"period\"> "+
       "Name: <input type=\"text\" class=\"name\">"+
       "<input type=\"button\" value=\"Save\" class=\"saveButton\" />"+
-    	"<input type=\"button\" value=\"Delete\" class=\"deleteButton\" />"
+    	"<input type=\"button\" value=\"Delete\" class=\"deleteButton\" />"+
+      "<br>Encounters:"+
+      "<div class=\"questEncounters\">"+
+      "</div>"+
+      "<br>Guilds:"+
+      "<div class=\"questGuilds\">"+
+      "</div>"
     );
     this.applyBindings();
 
-    if (!this.model.hasOwnProperty("id")) {
-      this.$el.addClass("unsaved");
-    }
-    else {
-      this.$el.removeClass("unsaved");
-    }
-
     return this;
-  },
-
-  renderId: function() {
-    this.$el.find('span.xpId').html(this.model.attributes.id);
-    this.$el.removeClass('unsaved');
   },
 
   delete: function() {

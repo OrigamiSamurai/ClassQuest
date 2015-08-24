@@ -4,20 +4,15 @@ var EncounterView = Backbone.Epoxy.View.extend({
   tagname: "li",
 
 	initialize: function(options){
-  	_.bindAll(this, 'render', 'renderXp', 'onSubmit', 'onCreated', 'onError', 'renderDate','ALERTME');// onsubmits are currently used for saving lower level items
+  	_.bindAll(this, 'render', 'renderXp', 'onSubmit', 'onCreated', 'onError');
     this.model.bind('add:xps', this.renderXp);
-    this.model.attributes.xps.bind('change', this.ALERTME);
 
     this.modAttr = this.model.attributes; 
   },
 
-  ALERTME: function(){
-    console.log("xps changed");
-  },
-
   bindings: {
-    "input.encounterName":"value:name",//,events:['keyup']",
-    "input.maxXp":"value:integer(maxXp)",//,events:['keyup']",
+    "input.encounterName":"value:name",
+    "input.maxXp":"value:integer(maxXp)",
     "select.xpType":"value:typeId"
   },
 
@@ -45,8 +40,7 @@ var EncounterView = Backbone.Epoxy.View.extend({
   render: function(){
     var prettyDate = this.modAttr.date.getMonth()+'/'+this.modAttr.date.getDate()+'/'+this.modAttr.date.getFullYear();
   	this.$el.html(
-    	"ID: "+ (this.modAttr.id ? this.modAttr.id : "") +
-      "<br>Name: <input type=\"text\" class=\"encounterName\""+ //this.modAttr.name+"\">"+
+      "<br>Name: <input type=\"text\" class=\"encounterName\""+
       "<br>Max XP award: <input type=\"text\" class=\"maxXp\">"+
       "<br>Type: <select class=\"type\">"+xpTypeOptions()+"</select>"+
       "<br>Encountered Date: <input type=\"text\" class=\"date\" value=\""+prettyDate+"\">"+
@@ -56,19 +50,12 @@ var EncounterView = Backbone.Epoxy.View.extend({
     	   "Amount: <input type=\"text\" value=\"1\" class=\"amount\" />"+
         "</div>"+
     	"</div>"+
-      "<br>Created Date: "+formatDate(this.modAttr.createdDate)+
-      "<br>Last Updated: <span class=\"updatedDate\">"+formatDate(this.modAttr.updatedDate)+"</span>"+
+      /*"<br>Created Date: "+formatDate(this.modAttr.createdDate)+
+      "<br>Last Updated: <span class=\"updatedDate\">"+formatDate(this.modAttr.updatedDate)+"</span>"+*/
     	"<br><input type=\"button\" value=\"Save\" class=\"saveButton\" />"+
     	"<br><input type=\"button\" value=\"Delete\" class=\"deleteButton\" /><span class=\"maxXp\"></span>"
     );
     this.applyBindings();
-
-    if (!this.model.hasOwnProperty("id")) {
-      this.$el.addClass("unsaved");
-    }
-    else {
-      this.$el.removeClass("unsaved");
-    }
 
     return this;
   },
@@ -94,9 +81,10 @@ var EncounterView = Backbone.Epoxy.View.extend({
     this.$el.find('.encounterXpContainer').append(encounterXpView.render().$el);
   },
 
+  /*
   renderDate: function() {
     this.$el.find('span.updatedDate').html(formatDate(this.model.attributes.updatedDate));
-  },
+  },*/
 
   delete: function() {
   	this.model.destroy();
@@ -107,8 +95,8 @@ var EncounterView = Backbone.Epoxy.View.extend({
     self = this;
     this.model.save({}, { 
       success: function (model, response, options) {
-          model.set({updatedDate:response.updatedDate});
-          self.renderDate();
+          //model.set({updatedDate:response.updatedDate});
+          //self.renderDate();
       },
       error: function (model, xhr, options) {
           console.log("Something went wrong while saving the model");

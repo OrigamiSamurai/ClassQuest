@@ -3,9 +3,11 @@ var AdventurerCollectionView = Backbone.Epoxy.View.extend({
 	el: $('#AdventurerContainer'),
 
 	initialize: function() {
-    _.bindAll(this, 'render', 'renderAdventurer', 'onSubmit', 'onCreated', 'onError');// onsubmits are currently used for saving lower level items
-    this.model.bind('reset', this.render);
-    this.model.bind('add', this.renderAdventurer); 
+	    _.bindAll(this, 'render', 'renderAdventurer', 'onSubmit', 'onCreated', 'onError');// onsubmits are currently used for saving lower level items
+	    this.model.bind('reset', this.render);
+	    this.model.bind('add', this.renderAdventurer); 
+
+	    this.render();
 	},
 
 	events: {
@@ -20,6 +22,7 @@ var AdventurerCollectionView = Backbone.Epoxy.View.extend({
 			"<br>Password: <input type=\"text\" id=\"NewAdventurerPassword\">"
 			);
 		this.model.forEach(this.renderAdventurer)
+
 		return this;
 	},
 

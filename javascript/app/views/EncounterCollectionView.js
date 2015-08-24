@@ -3,9 +3,11 @@ var EncounterCollectionView = Backbone.Epoxy.View.extend({
 	el: $('#EncounterContainer'),
 
 	initialize: function() {
-    _.bindAll(this, 'render', 'renderEncounter', 'onSubmit', 'onCreated', 'onError');// onsubmits are currently used for saving lower level items
-    this.model.bind('reset', this.render);
-    this.model.bind('add', this.renderEncounter); 
+	    _.bindAll(this, 'render', 'renderEncounter', 'onSubmit', 'onCreated', 'onError');// onsubmits are currently used for saving lower level items
+	    this.model.bind('reset', this.render);
+	    this.model.bind('add', this.renderEncounter); 
+
+	    this.render();
 	},
 
 	events: {
@@ -14,8 +16,9 @@ var EncounterCollectionView = Backbone.Epoxy.View.extend({
 
 	render: function() {
 		this.$el.html("<input type=\"button\" id=\"CreateEncounter\" value=\"Create Encounter\" />"+
-			"Name <input type=\"text\" id=\"NewEncounterName\">");
+			"<br>Name <input type=\"text\" id=\"NewEncounterName\">");
 		this.model.forEach(this.renderEncounter)
+		
 		return this;
 	},
 
