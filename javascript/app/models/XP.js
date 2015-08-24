@@ -3,6 +3,7 @@ var Xp = Backbone.RelationalModel.extend({
         amount: 0,
         typeId: 1,
         encounter: null,
+        adventurer: null,
         createdDate: new Date(),
         updatedDate: new Date(),
     },

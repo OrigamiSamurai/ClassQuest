@@ -1,12 +1,35 @@
 TODO:
 
-- Investigate using backbone relational
+- add DB support for adventurer in xps table
+- update xp to link to adventurer (model)
+- update php to send/receive adventurer id for xps
+- create adventurer view
+- create adventurer collection
 
-- write validate method for XP model
+- add restraints to DB fields (foreign keys for ids from other tables)
 
+- add current xp ... use a function on the model? bind change event on xps to update the total?
+- add adventurer level... or xp curve to calculate level?
+- add quests (a.k.a. classes/subjects)
+- add guilds (a.k.a. student groups)
 
-- model encounter in db
-- extend api for encounters
+API
+- quests
+  - adventurers
+    - encounters
+  - guilds
+    - adventurers
+    - encounters
+  - encounters
+- guilds
+  - adventurers
+    - encounters
+
+- remove ALERTME binding and function from adventurer and encounter views
+
+- figure out how to avoid epoxy from re-interpreting integer form values as text
+
+- write validation for all fields for all models (at model level)
 
 **************
 API GUIDELINES

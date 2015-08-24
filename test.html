@@ -8,14 +8,24 @@
   </head>
   <body>
 
-    <h1>Encounter Section</h1>
+    <h1>Edit Quests (classes)</h1>
+    <div id="QuestContainer"></div>
+
+    <h1>Guilds (student groups)</h1>
+    <div id="GuildContainer"></div>
+
+    <h1>Adventurers (students)</h1>
+    <div id="AdventurerContainer"></div>
+
+    <h1>Encounters (assignments) </h1>
     <div id="EncounterContainer"></div>
 
-    <h1>XP Section</h1>
-    <div id="XpContainer"></div>
+    <h1>XPs (grades) </h1>
+    <div id="EncounterContainer"></div>
 
-    <table id="StudentTable">
-    </table>
+    <h1>Loot (achievements)</h1>
+    <div id="LottContainer">To do: implement models/api/DB</div>
+
 
     <script src="javascript/lib/jquery-1.11.3.min.js"></script>
     <script src="javascript/lib/json2.js"></script>
@@ -43,6 +53,41 @@
     <script src="javascript/app/views/EncounterView.js" type="text/javascript"></script>
     <script src="javascript/app/views/EncounterXpView.js" type="text/javascript"></script>
     <script src="javascript/app/views/EncounterCollectionView.js" type="text/javascript"></script>
+
+    <script src="javascript/app/models/Adventurer.js" type="text/javascript"></script>
+    <script src="javascript/app/collections/AdventurerCollection.js" type="text/javascript"></script>
+    <script src="javascript/app/views/AdventurerView.js" type="text/javascript"></script>
+    <script src="javascript/app/views/AdventurerCollectionView.js" type="text/javascript"></script>
+
+    <script src="javascript/app/models/Guild.js" type="text/javascript"></script>
+    <script src="javascript/app/collections/GuildCollection.js" type="text/javascript"></script>
+    <script src="javascript/app/views/GuildView.js" type="text/javascript"></script>
+    <script src="javascript/app/views/GuildCollectionView.js" type="text/javascript"></script>
+
+    <script src="javascript/app/models/Quest.js" type="text/javascript"></script>
+    <script src="javascript/app/collections/QuestCollection.js" type="text/javascript"></script>
+    <script src="javascript/app/views/QuestView.js" type="text/javascript"></script>
+    <script src="javascript/app/views/QuestCollectionView.js" type="text/javascript"></script>
+    
+    <script src="javascript/app/models/QuestLicense.js" type="text/javascript"></script>
+    <script src="javascript/app/collections/QuestLicenseCollection.js" type="text/javascript"></script>
+    <!--<script src="javascript/app/views/QuestLicenseView.js" type="text/javascript"></script>
+    <script src="javascript/app/views/QuestLicenseCollectionView.js" type="text/javascript"></script>-->
+
+    <script src="javascript/app/models/GuildMembership.js" type="text/javascript"></script>
+    <script src="javascript/app/collections/GuildMembershipCollection.js" type="text/javascript"></script>
+    <!--<script src="javascript/app/views/GuildMembershipView.js" type="text/javascript"></script>
+    <script src="javascript/app/views/GuildMembershipCollectionView.js" type="text/javascript"></script>-->
+
+    <script src="javascript/app/models/GuildCharter.js" type="text/javascript"></script>
+    <script src="javascript/app/collections/GuildCharterCollection.js" type="text/javascript"></script>
+    <!--<script src="javascript/app/views/GuildCharterView.js" type="text/javascript"></script>
+    <script src="javascript/app/views/GuildGuildCharterCollectionView.js" type="text/javascript"></script>-->
+    
+    <script src="javascript/app/models/EncounterLicense.js" type="text/javascript"></script>
+    <script src="javascript/app/collections/EncounterLicenseCollection.js" type="text/javascript"></script>
+    <!--<script src="javascript/app/views/EncounterLicenseView.js" type="text/javascript"></script>
+    <script src="javascript/app/views/EncounterLicenseCollectionView.js" type="text/javascript"></script>-->
 
     <script src="javascript/app/app.js" type="text/javascript"></script>
   </body>

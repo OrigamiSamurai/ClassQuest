@@ -18,11 +18,19 @@ var xpTypeOptions = function() {
 	return html;
 }
 //var xpList = new XpCollectionView();
+/*
+var adventurers = new AdventurerCollection();
+var adventurersView = new AdventurerCollectionView({model:adventurers});
+adventurersView.model.fetch({reset: true});
 
 var encounters = new EncounterCollection();
 var encountersView = new EncounterCollectionView({model:encounters});
 encountersView.model.fetch({reset: true});
+*/
 
+var quests = new QuestCollection();
+var questsView = new QuestCollectionView({model:quests});
+quests.fetch();
 
 
 // backbone - fetch all the items and display them

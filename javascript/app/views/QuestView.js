@@ -1,7 +1,7 @@
-var EncounterXpView = Backbone.Epoxy.View.extend({
-	model: Xp,
+var QuestView = Backbone.Epoxy.View.extend({
+	model: Quest,
 
-	tagname: 'li',
+  tagname: "li",
 
 	initialize: function(options){
 
@@ -13,7 +13,8 @@ var EncounterXpView = Backbone.Epoxy.View.extend({
   },
 
   bindings: {
-    "input.xpAmount":"value:integer(amount)"
+    "input.period":"value:integer(period)",
+    "input.name":"value:name"
   },
 
   events: {
@@ -23,11 +24,10 @@ var EncounterXpView = Backbone.Epoxy.View.extend({
 
   render: function() {
     this.$el.html(
-      "For encounter: "+this.attr.encounter.attributes.name+
-      "<br>ID: <span class=\"xpId\">"+ (this.attr.id ? this.attr.id : "") + '</span>'+
-      "<br>Amount: <input type=\"text\" class=\"xpAmount\" value=\""+this.attr.amount+"\">"+
-    	"<br><input type=\"button\" value=\"Save\" class=\"saveButton\" />"+
-    	"<br><input type=\"button\" value=\"Delete\" class=\"deleteButton\" />"
+      "Period: <input type=\"text\" class=\"period\"> "+
+      "Name: <input type=\"text\" class=\"name\">"+
+      "<input type=\"button\" value=\"Save\" class=\"saveButton\" />"+
+    	"<input type=\"button\" value=\"Delete\" class=\"deleteButton\" />"
     );
     this.applyBindings();
 
@@ -54,11 +54,12 @@ var EncounterXpView = Backbone.Epoxy.View.extend({
 	save: function() {
     this.model.save({}, {
 	    success: function (model, response, options) {
-          model.set({updatedDate:response.updatedDate});
+          //model.set({updatedDate:response.updatedDate});
 	    },
 	    error: function (model, xhr, options) {
 	        console.log("Something went wrong while saving the model");
 	    }
   	});
   }
-})
+
+});

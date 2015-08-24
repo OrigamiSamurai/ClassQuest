@@ -1,0 +1,1172 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"xp",
+				"xpAmounts"
+			],
+			[
+				"json_",
+				"json_encode"
+			],
+			[
+				"get",
+				"getAll"
+			],
+			[
+				"json",
+				"json_encode"
+			],
+			[
+				"Creature",
+				"CreatureLibrary"
+			],
+			[
+				"portria",
+				"portraitAspectRatio"
+			],
+			[
+				"sourceIm",
+				"sourceImageHeight"
+			],
+			[
+				"new",
+				"newSelectY2"
+			],
+			[
+				"newS",
+				"newSelectY1"
+			],
+			[
+				"sour",
+				"sourceImageWidth"
+			],
+			[
+				"newSel",
+				"newSelectX1"
+			],
+			[
+				"portr",
+				"portraitAspectRatio"
+			],
+			[
+				"news",
+				"newSelectY1"
+			],
+			[
+				"set",
+				"setSelect"
+			],
+			[
+				"port",
+				"portraitHeight"
+			],
+			[
+				"newse",
+				"newSelectY2"
+			],
+			[
+				"por",
+				"portraitHeight"
+			],
+			[
+				"newSe",
+				"newSelectY2"
+			],
+			[
+				"reset",
+				"resetAspectRatio"
+			],
+			[
+				"portraitWidth",
+				"portraitWidthInches"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"cl",
+				"clearQueue"
+			],
+			[
+				"Creatu",
+				"CreatureLibrary"
+			],
+			[
+				"jso",
+				"json_encode"
+			],
+			[
+				"des",
+				"destinationHeight"
+			],
+			[
+				"y",
+				"yOffset"
+			],
+			[
+				"x",
+				"xOffset"
+			],
+			[
+				"image",
+				"imageUrl"
+			],
+			[
+				"in",
+				"imageInputMode"
+			],
+			[
+				"w",
+				"w"
+			],
+			[
+				"input",
+				"inputWidth"
+			],
+			[
+				"uplo",
+				"uploader"
+			],
+			[
+				"inli",
+				"inline-block"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"tok",
+				"tokenDesignationNumber"
+			],
+			[
+				"r",
+				"response"
+			],
+			[
+				"u",
+				"uploader"
+			],
+			[
+				"im",
+				"imageUrl"
+			],
+			[
+				"tar",
+				"target_fileName"
+			],
+			[
+				"upload",
+				"uploadNewTokenImageButton"
+			],
+			[
+				"upl",
+				"uploadNewTokenImageButton"
+			],
+			[
+				"respo",
+				"responseData"
+			],
+			[
+				"resp",
+				"responseData"
+			],
+			[
+				"create",
+				"creatureCollectionView"
+			],
+			[
+				"Create",
+				"createCreatureView"
+			],
+			[
+				"random",
+				"randomStatName"
+			],
+			[
+				"race",
+				"raceSources"
+			],
+			[
+				"rac",
+				"racialAbilityScoreBonuses"
+			],
+			[
+				"left",
+				"margin-left"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"sta",
+				"statModel"
+			],
+			[
+				"ra",
+				"raceSource"
+			],
+			[
+				"check",
+				"checkedModel"
+			],
+			[
+				"st",
+				"statModel"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "javascript/app/models/Quest.js",
+			"settings":
+			{
+				"buffer_size": 1277,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "javascript/app/models/Loot.js",
+			"settings":
+			{
+				"buffer_size": 157,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "javascript/app/collections/LootCollection.js",
+			"settings":
+			{
+				"buffer_size": 131,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "javascript/app/views/LootView.js",
+			"settings":
+			{
+				"buffer_size": 153,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "javascript/app/models/EncounterLicense.js",
+			"settings":
+			{
+				"buffer_size": 196,
+				"line_ending": "Windows",
+				"name": "var EncounterLicense = Backbone.RelationalModel.ex"
+			}
+		},
+		{
+			"file": "javascript/app/collections/EncounterLicenseCollection.js",
+			"settings":
+			{
+				"buffer_size": 161,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "javascript/app/models/QuestLicense.js",
+			"settings":
+			{
+				"buffer_size": 189,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "javascript/app/collections/QuestLicenseCollection.js",
+			"settings":
+			{
+				"buffer_size": 149,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "javascript/app/collections/GuildMembershipCollection.js",
+			"settings":
+			{
+				"buffer_size": 155,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "javascript/app/models/GuildMembership.js",
+			"settings":
+			{
+				"buffer_size": 192,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "javascript/app/views/EncounterView.js",
+			"settings":
+			{
+				"buffer_size": 3692,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "javascript/app/models/GuildCharter.js",
+			"settings":
+			{
+				"buffer_size": 184,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "javascript/app/collections/GuildCharterCollection.js",
+			"settings":
+			{
+				"buffer_size": 149,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "javascript/app/models/Adventurer.js",
+			"settings":
+			{
+				"buffer_size": 1909,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "javascript/app/views/AdventurerView.js",
+			"settings":
+			{
+				"buffer_size": 2547,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "javascript/app/models/Encounter.js",
+			"settings":
+			{
+				"buffer_size": 1024,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "javascript/app/models/Guild.js",
+			"settings":
+			{
+				"buffer_size": 952,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "test.html",
+			"settings":
+			{
+				"buffer_size": 5181,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "javascript/app/app.js",
+			"settings":
+			{
+				"buffer_size": 5185,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "TODO.txt",
+			"settings":
+			{
+				"buffer_size": 1610,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/D/Dropbox/Richard/CODING/AngularTokenLibrary/app/index.php",
+		"/D/Dropbox/Richard/CODING/AngularTokenLibrary/app/template/Head.html",
+		"/D/Dropbox/Richard/CODING/AngularTokenLibrary/app/template/TokenList.html",
+		"/D/Dropbox/Richard/CODING/AngularTokenLibrary/app/template/NewCreature.html",
+		"/D/Dropbox/Richard/CODING/AngularTokenLibrary/app/template/CreatureList.html",
+		"/D/Dropbox/Richard/CODING/AngularTokenLibrary/app/js/NewCreatureCtrl.js",
+		"/D/Dropbox/Richard/CODING/AngularTokenLibrary/app/js/CreatureListCtrl.js",
+		"/D/Dropbox/Richard/CODING/AngularTokenLibrary/app/js/TokenListCtrl.js",
+		"/D/Dropbox/Richard/CODING/AngularTokenLibrary/app/js/app.js",
+		"/D/Dropbox/Richard/CODING/ClassQuest/javascript/app/models/Quest.js",
+		"/D/Dropbox/Richard/CODING/ClassQuest/javascript/app/models/EncounterTemplate.js",
+		"/D/Dropbox/Richard/CODING/ClassQuest/javascript/app/models/Guild.js",
+		"/D/Dropbox/Richard/CODING/ClassQuest/javascript/app/collections/GuildCollection.js",
+		"/D/Dropbox/Richard/CODING/ClassQuest/javascript/app/collections/QuestCollection.js",
+		"/D/Dropbox/Richard/CODING/AngularTokenLibrary/app/CreatePortrait.php",
+		"/D/Dropbox/Richard/CODING/AngularTokenLibrary/app/css/tokenlibrary.css",
+		"/D/Dropbox/Richard/CODING/AngularTokenLibrary/app/CreatureLibrary.php",
+		"/D/Dropbox/Richard/CODING/ClassQuest/javascript/app/models/Adventurer.js",
+		"/D/Dropbox/Richard/CODING/ClassQuest/javascript/app/models/Loot.js",
+		"/D/Dropbox/Richard/CODING/ClassQuest/javascript/app/models/Xp.js",
+		"/D/Dropbox/Richard/CODING/ClassQuest/TODO.txt",
+		"/D/Dropbox/Richard/CODING/ClassQuest/test.html",
+		"/D/Dropbox/Richard/CODING/ClassQuest/javascript/app/views/AdventurerCollectionView.js",
+		"/D/Dropbox/Richard/CODING/ClassQuest/javascript/app/views/EncounterView.js",
+		"/D/Dropbox/Richard/CODING/ClassQuest/javascript/app/views/AdventurerView.js",
+		"/D/Dropbox/Richard/CODING/ClassQuest/javascript/app/views/EncounterXpView.js",
+		"/D/Dropbox/Richard/CODING/ClassQuest/javascript/app/collections/AdventurerCollection.js",
+		"/D/Dropbox/Richard/CODING/ClassQuest/javascript/app/app.js",
+		"/D/Dropbox/Richard/CODING/AngularTokenLibrary/app/index.html",
+		"/D/Dropbox/Richard/CODING/AngularTokenLibrary/app/ImageUpload.php",
+		"/D/Dropbox/Richard/CODING/AngularTokenLibrary/app/bower_components/angular/angular-file-upload.js",
+		"/D/Dropbox/Richard/CODING/TokenLibrary/tokenlibrary/TokenGenerator.php",
+		"/C/Users/Richard/Desktop/ng-file-upload-bower-4.2.1/ng-file-upload-shim.js",
+		"/D/Dropbox/Richard/CODING/AngularTokenLibrary/app/CheckUrl.php",
+		"/D/Dropbox/Richard/CODING/TokenLibrary/javascript/TokenLibrary.js",
+		"/D/Dropbox/Richard/CODING/AngularTokenLibrary/app/js/validation.js",
+		"/D/Dropbox/Richard/CODING/TokenLibrary/tokenlibrary/TokenLibrary.html",
+		"/D/Dropbox/Richard/CODING/AngularTokenLibrary/app/template/tabs/tabset.html",
+		"/D/Dropbox/Richard/CODING/AngularTokenLibrary/app/template/tabs/tab.html",
+		"/D/Dropbox/Richard/CODING/AngularTokenLibrary/app/js/controllers.js",
+		"/D/Dropbox/Richard/CODING/AngularTokenLibrary/app/bower_components/angular/ui-bootstrap-0.13.0.js",
+		"/D/Dropbox/Richard/CODING/JavaHelloWorld/HelloWorldApp.java",
+		"/C/Users/Richard/Desktop/WaitForTransitionDurationOn() Method (Java version).txt",
+		"/D/Dropbox/Richard/CODING/Burninator/BurninatorUnitTester/BurninatorUnitTester.vssscc",
+		"/D/Dropbox/Richard/CODING/Burninator/Burninator/Burninator.csproj.vspscc",
+		"/C/Trogdor/6bb80c95-2163-4efe-a0d7-f1b9e2aa5393.eml",
+		"/C/Trogdor/e844199c-64e9-4f66-b62a-11fd5e1d5cd4.eml",
+		"/C/Trogdor/6d1f1528-3a18-4116-92d3-1471129a700f.eml",
+		"/D/Dropbox/Richard/CODING/Burninator/Burninator/Burninator.sln",
+		"/D/Dropbox/Richard/CODING/Burninator/Burninator/Burninator.csproj",
+		"/C/Users/Richard/Desktop/FileAPI.js",
+		"/C/Users/Richard/Desktop/angular-file-upload.js",
+		"/C/Users/Richard/Desktop/bower.json",
+		"/C/Users/Richard/Desktop/ng-file-upload-all.js",
+		"/C/Users/Richard/Desktop/README.md",
+		"/D/Dropbox/Richard/CODING/TokenLibrary/tokenlibrary/ImageUpload.php",
+		"/D/Dropbox/Richard/CODING/TokenLibrary/javascript/TokenLibrary/views/CreateCreatureView.js",
+		"/D/Dropbox/Richard/CODING/TokenLibrary/javascript/TokenLibrary/mustachetemplates/TokenLibraryTemplates.js",
+		"/D/Dropbox/Richard/CODING/AngularTokenLibrary/app/bower_components/angular.js",
+		"/D/Dropbox/Richard/CODING/AngularTutorial/angular-phonecat/package.json",
+		"/D/Dropbox/Richard/CODING/TokenLibrary/javascript/TokenLibrary/TokenLibrary.js",
+		"/D/Dropbox/Richard/CODING/TokenLibrary/javascript/TokenLibrary/TokenLibraryStartup.js",
+		"/D/Video Games/World of Tanks/res_mods/xvm/configs/xvm.xc.sample",
+		"/D/Video Games/World of Tanks/res_mods/xvm/configs/xvm.xc",
+		"/D/Video Games/World of Tanks/res_mods/xvm/configs/default/minimap.xc",
+		"/D/Dropbox/Richard/PFCG/Notes.txt",
+		"/D/Dropbox/Richard/PFCG/javascript/PFCG.js",
+		"/D/Dropbox/Richard/PFCG/javascript/mustache/templates/templates.js",
+		"/D/Dropbox/Richard/PFCG/javascript/views/RaceOptionView.js",
+		"/D/Dropbox/Richard/PFCG/javascript/views/RaceSelectView.js",
+		"/D/Dropbox/Richard/PFCG/css/styles.css",
+		"/D/Dropbox/Richard/PFCG/javascript/views/CharacterView.js",
+		"/D/Dropbox/Richard/PFCG/PFCG.html",
+		"/D/Dropbox/Richard/PFCG/javascript/views/DebugStatView.js",
+		"/D/Dropbox/Richard/PFCG/javascript/views/CreateStatView.js",
+		"/D/Dropbox/Richard/PFCG/javascript/utilityFunctions.js",
+		"/D/Dropbox/Richard/PFCG/javascript/views/StatValueView.js",
+		"/D/Dropbox/Richard/PFCG/javascript/views/DebugView.js",
+		"/D/Dropbox/Richard/PFCG/javascript/views/DebugSourceView.js",
+		"/D/Dropbox/Richard/PFCG/javascript/views/AbilityScoreBonusValueView.js",
+		"/D/Dropbox/Richard/PFCG/javascript/views/AbilityScoreView.js",
+		"/D/Dropbox/Richard/PFCG/javascript/collections/StatCollection.js",
+		"/D/Dropbox/Richard/PFCG/javascript/models/Stat.js",
+		"/D/Dropbox/Richard/PFCG/javascript/models/Character.js",
+		"/D/Dropbox/Richard/PFCG/javascript/views/DebugBarView.js",
+		"/C/Users/Richard/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"jcrop",
+			"newCreature.portraitWidth",
+			"jcrop",
+			"successfulUpload",
+			"FileLikeObject",
+			"onafteraddingfile",
+			"clearNewCreatureForm",
+			"updateSelectedFileName",
+			"newCreature.imageUrl",
+			"portraitWidth",
+			"->",
+			"$payload",
+			"clearNewCreatureForm",
+			"kre",
+			"FileUploader",
+			"upload",
+			"vent.",
+			"vent.listen",
+			"vent.on",
+			"setNewTokenImageURLButton",
+			"newTokenImageUrl",
+			"javascript/TokenLibrary",
+			"PFCG",
+			"Interviewer",
+			"trigger",
+			"clone",
+			"2do",
+			"logmodel",
+			"log to",
+			"2do",
+			"//",
+			"logStat",
+			"remove",
+			"2DO",
+			"new StatCol",
+			"new stat"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"newCreature.sourceImageUrl",
+			"['",
+			"$_POST",
+			"setNewCreaturePortraitURLButton",
+			"newCreaturePortraitUrl",
+			"pfcg",
+			"DJ Wasteland"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 19,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "javascript/app/models/Quest.js",
+					"settings":
+					{
+						"buffer_size": 1277,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1272,
+								1272
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 135.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "javascript/app/models/Loot.js",
+					"settings":
+					{
+						"buffer_size": 157,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								152,
+								152
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "javascript/app/collections/LootCollection.js",
+					"settings":
+					{
+						"buffer_size": 131,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								131,
+								131
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "javascript/app/views/LootView.js",
+					"settings":
+					{
+						"buffer_size": 153,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								153,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "javascript/app/models/EncounterLicense.js",
+					"settings":
+					{
+						"buffer_size": 196,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								191,
+								191
+							]
+						],
+						"settings":
+						{
+							"auto_name": "var EncounterLicense = Backbone.RelationalModel.ex",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "javascript/app/collections/EncounterLicenseCollection.js",
+					"settings":
+					{
+						"buffer_size": 161,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								161,
+								161
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "javascript/app/models/QuestLicense.js",
+					"settings":
+					{
+						"buffer_size": 189,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								184,
+								184
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "javascript/app/collections/QuestLicenseCollection.js",
+					"settings":
+					{
+						"buffer_size": 149,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								149
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "javascript/app/collections/GuildMembershipCollection.js",
+					"settings":
+					{
+						"buffer_size": 155,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								150,
+								150
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "javascript/app/models/GuildMembership.js",
+					"settings":
+					{
+						"buffer_size": 192,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								187,
+								187
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "javascript/app/views/EncounterView.js",
+					"settings":
+					{
+						"buffer_size": 3692,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								85,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "javascript/app/models/GuildCharter.js",
+					"settings":
+					{
+						"buffer_size": 184,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								179,
+								179
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "javascript/app/collections/GuildCharterCollection.js",
+					"settings":
+					{
+						"buffer_size": 149,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								143,
+								143
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "javascript/app/models/Adventurer.js",
+					"settings":
+					{
+						"buffer_size": 1909,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1905,
+								1840
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 765.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "javascript/app/views/AdventurerView.js",
+					"settings":
+					{
+						"buffer_size": 2547,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								174,
+								174
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "javascript/app/models/Encounter.js",
+					"settings":
+					{
+						"buffer_size": 1024,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								611,
+								611
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "javascript/app/models/Guild.js",
+					"settings":
+					{
+						"buffer_size": 952,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								594,
+								594
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 17,
+					"file": "test.html",
+					"settings":
+					{
+						"buffer_size": 5181,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5036,
+								5036
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 720.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 18,
+					"file": "javascript/app/app.js",
+					"settings":
+					{
+						"buffer_size": 5185,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1107,
+								1107
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 19,
+					"file": "TODO.txt",
+					"settings":
+					{
+						"buffer_size": 1610,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								596,
+								596
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 237.0,
+	"status_bar_visible": true
+}

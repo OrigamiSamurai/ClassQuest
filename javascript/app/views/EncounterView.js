@@ -4,15 +4,20 @@ var EncounterView = Backbone.Epoxy.View.extend({
   tagname: "li",
 
 	initialize: function(options){
-  	_.bindAll(this, 'render', 'renderXp', 'onSubmit', 'onCreated', 'onError', 'renderDate');// onsubmits are currently used for saving lower level items
-    this.model.bind('add:xps', this.renderXp); 
+  	_.bindAll(this, 'render', 'renderXp', 'onSubmit', 'onCreated', 'onError', 'renderDate','ALERTME');// onsubmits are currently used for saving lower level items
+    this.model.bind('add:xps', this.renderXp);
+    this.model.attributes.xps.bind('change', this.ALERTME);
 
     this.modAttr = this.model.attributes; 
   },
 
+  ALERTME: function(){
+    console.log("xps changed");
+  },
+
   bindings: {
     "input.encounterName":"value:name",//,events:['keyup']",
-    "input.maxXp":"value:maxXp",//,events:['keyup']",
+    "input.maxXp":"value:integer(maxXp)",//,events:['keyup']",
     "select.xpType":"value:typeId"
   },
 
@@ -30,7 +35,7 @@ var EncounterView = Backbone.Epoxy.View.extend({
 
   saveDate: function(){
     if (isNaN(Date.parse($('.date').val()))) {
-      console.log('this aint a properly formatted date, shithead');
+      alert('this aint a properly formatted date, shithead', $('.date').val() );
     }
     else {
       this.model.set({date:new Date(Date.parse(this.$el.find('.date').val()))})  
@@ -38,7 +43,6 @@ var EncounterView = Backbone.Epoxy.View.extend({
   },
 
   render: function(){
-  	console.log("rendering encounter "+this.model.id);
     var prettyDate = this.modAttr.date.getMonth()+'/'+this.modAttr.date.getDate()+'/'+this.modAttr.date.getFullYear();
   	this.$el.html(
     	"ID: "+ (this.modAttr.id ? this.modAttr.id : "") +
@@ -70,9 +74,7 @@ var EncounterView = Backbone.Epoxy.View.extend({
   },
 
   onSubmit: function() {
-  	console.log('submitted new xp');
     var xp = new Xp({amount:parseInt(this.$el.find('.amount').val()), typeId: this.model.typeId, encounter:this.model});
-    console.log('new xp created',xp);
     xp.save({}, {
 	    success: this.onCreated,
 	    error: this.onError
@@ -80,11 +82,7 @@ var EncounterView = Backbone.Epoxy.View.extend({
   },
 
   onCreated: function(xp, response) {
-    console.log('new xp on created callback fired',xp,response);
-    console.log('adding xp to encounter',xp);
-    console.log('xps in this encounter before',this.model.attributes.xps);
     this.model.attributes.xps.add(xp);
-    console.log('xps in this encounter after',this.model.attributes.xps);
 	},
 
 	onError: function(xp, response) {
@@ -92,7 +90,6 @@ var EncounterView = Backbone.Epoxy.View.extend({
 	},
 
   renderXp: function(model) {
-    console.log('render xp - create new view and add it');
     var encounterXpView = new EncounterXpView({model:model});
     this.$el.find('.encounterXpContainer').append(encounterXpView.render().$el);
   },
@@ -108,7 +105,7 @@ var EncounterView = Backbone.Epoxy.View.extend({
 
   save: function() {
     self = this;
-    this.model.save({}, { //name:$('.encounterName').val()
+    this.model.save({}, { 
       success: function (model, response, options) {
           model.set({updatedDate:response.updatedDate});
           self.renderDate();
