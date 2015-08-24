@@ -1,0 +1,112 @@
+ENSURE YOU ARE USING InnoDB storage engine
+Put in anchor tables first (adventurers, quests, guilds, encounters, achievements, THEN linking tables)
+
+CREATE TABLE `achievement_certificates` (
+ `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+ adventurer_id int(11) unsigned NOT NULL,
+ achievement_id int(11) unsigned NOT NULL,
+ created_date timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+ PRIMARY KEY (id),
+ FOREIGN KEY (adventurer_id) REFERENCES adventurers(id) ON DELETE NO ACTION ON UPDATE NO ACTION,
+ FOREIGN KEY (achievement_id) REFERENCES achievements(id) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci
+
+CREATE TABLE `achievements` (
+ `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+ `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+ PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci
+
+CREATE TABLE `adventurers` (
+ `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+ `first_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+ `last_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+ `login` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+ `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+ `level` int(11) unsigned NOT NULL,
+ `current_xp` int(11) unsigned NOT NULL,
+ `created_date` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+ `updated_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci
+
+CREATE TABLE `encounters` (
+ `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+ `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+ `max_xp` int(11) unsigned NOT NULL,
+ `type_id` int(11) unsigned NOT NULL,
+ `encounter_date` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+ `created_date` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+ `updated_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci
+
+CREATE TABLE `encounter_license` (
+ `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+ `quest_id` int(11) unsigned NOT NULL,
+ `encounter_id` int(11) unsigned NOT NULL,
+ PRIMARY KEY (`id`),
+ FOREIGN KEY (quest_id) REFERENCES quests(id) ON DELETE NO ACTION ON UPDATE NO ACTION,
+ FOREIGN KEY (encounter_id) REFERENCES encounters(id) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci
+
+CREATE TABLE `encounter_types` (
+ `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+ `encounter_type_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+ `xp_type_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+ PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci
+
+CREATE TABLE `guilds` (
+ `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+ `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+ PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci
+
+CREATE TABLE `guild_charters` (
+ `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+ `quest_id` int(11) unsigned NOT NULL,
+ `guild_id` int(11) unsigned NOT NULL,
+ PRIMARY KEY (`id`),
+ FOREIGN KEY (quest_id) REFERENCES quests(id) ON DELETE NO ACTION ON UPDATE NO ACTION,
+ FOREIGN KEY (guild_id) REFERENCES guilds(id) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci
+
+CREATE TABLE `guild_memberships` (
+ `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+ `guild_id` int(11) unsigned NOT NULL,
+ `adventurer_id` int(11) unsigned NOT NULL,
+ PRIMARY KEY (`id`),
+ FOREIGN KEY (adventurer_id) REFERENCES adventurers(id) ON DELETE NO ACTION ON UPDATE NO ACTION,
+ FOREIGN KEY (guild_id) REFERENCES guilds(id) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci
+
+CREATE TABLE `quests` (
+ `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+ `period` int(11) unsigned NOT NULL,
+ `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+ PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci
+
+CREATE TABLE `quest_licenses` (
+ `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+ `quest_id` int(11) unsigned NOT NULL,
+ `adventurer_id` int(11) unsigned NOT NULL,
+ PRIMARY KEY (`id`),
+ FOREIGN KEY (adventurer_id) REFERENCES adventurers(id) ON DELETE NO ACTION ON UPDATE NO ACTION,
+ FOREIGN KEY (quest_id) REFERENCES quests(id) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci
+
+CREATE TABLE `xps` (
+ `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+ `adventurer_id` int(11) unsigned NOT NULL,
+ `amount` int(11) unsigned NOT NULL,
+ `type_id` int(11) unsigned NOT NULL,
+ `encounter_id` int(11) unsigned NOT NULL,
+ `created_date` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+ `updated_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`),
+ FOREIGN KEY (adventurer_id) REFERENCES adventurers(id) ON DELETE NO ACTION ON UPDATE NO ACTION,
+ FOREIGN KEY (type_id) REFERENCES encounter_types(id) ON DELETE NO ACTION ON UPDATE NO ACTION,
+ FOREIGN KEY (encounter_id) REFERENCES encounters(id) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci
