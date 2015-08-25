@@ -44,7 +44,7 @@ var EncounterView = Backbone.Epoxy.View.extend({
       "<br>Max XP award: <input type=\"text\" class=\"maxXp\">"+
       "<br>Type: <select class=\"type\">"+xpTypeOptions()+"</select>"+
       "<br>Encountered Date: <input type=\"text\" class=\"date\" value=\""+prettyDate+"\">"+
-      "<br>XP Awards:"+
+      "<br>XP Awarded:"+
       "<div class=\"encounterXpContainer\">"+
         "<input type=\"button\" value=\"Create XP\" class=\"createXp\" />"+
     	   "Amount: <input type=\"text\" value=\"1\" class=\"amount\" />"+

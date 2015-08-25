@@ -32,6 +32,9 @@ var QuestView = Backbone.Epoxy.View.extend({
       "</div>"+
       "<br>Guilds:"+
       "<div class=\"questGuilds\">"+
+      "</div>"+
+      "<br>Adventurers:"+
+      "<div class=\"questAdventurers\">"+
       "</div>"
     );
     this.applyBindings();
