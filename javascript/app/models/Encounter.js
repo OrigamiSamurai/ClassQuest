@@ -6,8 +6,6 @@ var Encounter = Backbone.RelationalModel.extend({
 		encounterLicenses: [],
 		xps: [],
 		date: new Date(),
-		createdDate: new Date(),
-		updatedDate: new Date()
 	},
 
 	relations: [
@@ -39,8 +37,6 @@ var Encounter = Backbone.RelationalModel.extend({
 
   parse: function(response) {
       response.date = new Date(response.date);
-      response.createdDate = new Date(response.createdDate);
-      response.updatedDate = new Date(response.updatedDate);
       return response;
   },
 

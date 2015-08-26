@@ -1,20 +1,43 @@
-var AchievementView = Backbone.Epoxy.View.extend({
+var SampleView = Backbone.Epoxy.View.extend({
 	model: Achievement,
 
-  tagname: "li",
+	// If it will be repeated, use tagname
+  	tagname: "li",
 
 	initialize: function(options){
-
-  	_.bindAll(this, 'render','renderAdventurerPicker', 'save', 'renderCertificate', 'onSubmitCertificate', 'onCertificateCreated', 'onCertificateError');
+	// Bind all functions unless they should use a foregin context
+  	_.bindAll(this, 'render','renderAdventurerPicker', 'save', 'renderCertificate');
+    
+    // Re-render if model is reset
     this.model.bind('reset', this.render);
-    adventurers.bind('add', this.renderAdventurerPicker);
+
+    // If model updates, render any new views required. Epoxy will render any field updates
     this.model.attributes.achievementCertificates.bind('add', this.renderCertificate);
 
+    // Here's an example of a view element that relies of data outside the model. In general, avoid this if possible
+    adventurers.bind('add', this.renderAdventurerPicker);
+
+    // time-saving mapping
     this.attr = this.model.attributes;
   },
 
+  // Epoxy bindings - use value:modelAttributeName to bind 2-way or text:modelAttributeName for read-only
+  //   Also, if you define custom computed get/set for intermediary values, you can use them in place of the modelAttributeName
+  computeds: {
+    sampleAttributeConverted: {
+      deps: ['sampleAttribute'],
+      get: function (sampleAttribute) {
+        return convert(sampleAttribute);
+      },
+      set: function (sampleAttribute) {
+      	return transform(sampleAttribute);
+      }
+    
+  },
+
   bindings: {
-    "input.name":"value:name"
+    "input.name":"value:sampleAttributeConverted"
+    "input.other":"text:someAttribute"
   },
 
   events: {
@@ -48,22 +71,15 @@ var AchievementView = Backbone.Epoxy.View.extend({
 
   onSubmitCertificate: function() {
     var adventurer = adventurers.get(this.$el.find('.adventurerDropdown')[0].value);
-    var myAdventurers = this.model.attributes.achievementCertificates.pluck('adventurer');
-    if (!_.contains(myAdventurers, adventurer)) {
-      var achievementCertificate = new AchievementCertificate({achievement:this.model,adventurer:adventurer});
-      
-      achievementCertificate.save({}, {
-        success: this.onCertificateCreated,
-        error: this.onCertificateError
-      });
-    }
-    else {
-      console.log("Adventurer already has this achievement.");
-    }
+    var achievementCertificate = new AchievementCertificate({achievement:this.model,adventurer:adventurer});
+    
+    achievementCertificate.save({}, {
+      success: this.onCertificateCreated,
+      error: this.onCertificateError
+    });
   },
 
-  onCertificateCreated: function(achievementCertificate, b, c) {
-    console.log(achievementCertificate,b,c)
+  onCertificateCreated: function() {
     this.model.attributes.achievementCertificates.add(achievementCertificate);
     this.model.save();
   },
@@ -95,5 +111,4 @@ var AchievementView = Backbone.Epoxy.View.extend({
 	    }
   	});
   }
-
-});
+})

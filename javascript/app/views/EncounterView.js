@@ -4,60 +4,69 @@ var EncounterView = Backbone.Epoxy.View.extend({
   tagname: "li",
 
 	initialize: function(options){
-  	_.bindAll(this, 'render', 'renderXp', 'onSubmit', 'onCreated', 'onError');
+  	_.bindAll(this, 'render', 'renderXp', 'onSubmitXp', 'onXpCreated', 'onXpError');
+
     this.model.bind('add:xps', this.renderXp);
 
     this.modAttr = this.model.attributes; 
   },
 
+  computeds: {
+    prettyDate: {
+      deps: ['date'],
+      get: function (date) {
+        return date.getMonth()+'/'+date.getDate()+'/'+date.getFullYear();
+      },
+      set: function (value) {
+        if (isNaN(Date.parse($('.date').val()))) {
+          alert('this aint a properly formatted date, shithead', $('.date').val() );
+        }
+        else {
+          this.setBinding('date', new Date(Date.parse(this.$el.find('.date').val())))  
+        }
+      }
+    
+  },
+
   bindings: {
     "input.encounterName":"value:name",
     "input.maxXp":"value:integer(maxXp)",
-    "select.xpType":"value:typeId"
+    "select.xpType":"value:typeId",
+    "input.date":"value:prettyDate"
   },
 
   events: {
   	"click .deleteButton": "delete",
   	"click .saveButton": "save",
-  	"click .createXp": "onSubmit",
+  	"click .createXp": "onSubmitXp",
     "blur .date":"saveDate",
     "change .type":"saveType"
   },
 
-  saveType: function() {
-    this.model.set({typeId:parseInt(this.$el.find('.type').val())});
-  },
 
-  saveDate: function(){
-    if (isNaN(Date.parse($('.date').val()))) {
-      alert('this aint a properly formatted date, shithead', $('.date').val() );
-    }
-    else {
-      this.model.set({date:new Date(Date.parse(this.$el.find('.date').val()))})  
-    }
-  },
 
   render: function(){
-    var prettyDate = this.modAttr.date.getMonth()+'/'+this.modAttr.date.getDate()+'/'+this.modAttr.date.getFullYear();
   	this.$el.html(
       "<br>Name: <input type=\"text\" class=\"encounterName\""+
       "<br>Max XP award: <input type=\"text\" class=\"maxXp\">"+
       "<br>Type: <select class=\"type\">"+xpTypeOptions()+"</select>"+
-      "<br>Encountered Date: <input type=\"text\" class=\"date\" value=\""+prettyDate+"\">"+
+      "<br>Encountered Date: <input type=\"text\" class=\"date\">"+
       "<br>XP Awarded:"+
       "<div class=\"encounterXpContainer\">"+
         "<input type=\"button\" value=\"Create XP\" class=\"createXp\" />"+
     	   "Amount: <input type=\"text\" value=\"1\" class=\"amount\" />"+
         "</div>"+
     	"</div>"+
-      /*"<br>Created Date: "+formatDate(this.modAttr.createdDate)+
-      "<br>Last Updated: <span class=\"updatedDate\">"+formatDate(this.modAttr.updatedDate)+"</span>"+*/
     	"<br><input type=\"button\" value=\"Save\" class=\"saveButton\" />"+
     	"<br><input type=\"button\" value=\"Delete\" class=\"deleteButton\" /><span class=\"maxXp\"></span>"
     );
     this.applyBindings();
 
     return this;
+  },
+
+  saveType: function() {
+    this.model.set({typeId:parseInt(this.$el.find('.type').val())});
   },
 
   onSubmit: function() {
