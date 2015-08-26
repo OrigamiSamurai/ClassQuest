@@ -15,7 +15,7 @@ var Encounter = Backbone.RelationalModel.extend({
 			relatedModel: 'Xp',
 			includeInJSON: 'id',
 			collectionType: 'XpCollection',
-			autoFetch: true,
+			//autoFetch: true,
 			reverseRelation: {
 				key: 'encounter',
 				includeInJSON: 'id'
@@ -27,7 +27,7 @@ var Encounter = Backbone.RelationalModel.extend({
 			relatedModel: 'EncounterLicense',
 			includeInJSON: 'id',
 			collectionType: 'EncounterLicenseCollection',
-			autoFetch: true,
+			//autoFetch: true,
 			reverseRelation: {
 				key: 'encounter',
 				includeInJSON: 'id'

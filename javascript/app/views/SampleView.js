@@ -32,7 +32,7 @@ var SampleView = Backbone.Epoxy.View.extend({
       set: function (sampleAttribute) {
       	return transform(sampleAttribute);
       }
-    
+    }
   },
 
   bindings: {

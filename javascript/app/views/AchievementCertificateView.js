@@ -1,8 +1,6 @@
 var AchievementCertificateView = Backbone.Epoxy.View.extend({
 	model: AchievementCertificate,
 
-  tagname: "li",
-
 	initialize: function(options){
 
   	_.bindAll(this, 'render');

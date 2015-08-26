@@ -13,7 +13,7 @@ var Quest = Backbone.RelationalModel.extend({
 			relatedModel: 'GuildCharter',
 			includeInJSON: 'id',
 			collectionType: 'GuildCharterCollection',
-			autoFetch: true,
+			//autoFetch: true,
 			reverseRelation: {
 				key: 'quest',
 				includeInJSON: 'id'
@@ -25,7 +25,7 @@ var Quest = Backbone.RelationalModel.extend({
 			relatedModel: 'QuestLicense',
 			includeInJSON: 'id',
 			collectionType: 'QuestLicenseCollection',
-			autoFetch: true,
+			//autoFetch: true,
 			reverseRelation: {
 				key: 'quest',
 				includeInJSON: 'id'
@@ -37,7 +37,7 @@ var Quest = Backbone.RelationalModel.extend({
 			relatedModel: 'EncounterLicense',
 			includeInJSON: 'id',
 			collectionType: 'EncounterLicenseCollection',
-			autoFetch: true,
+			//autoFetch: true,
 			reverseRelation: {
 				key: 'quest',
 				includeInJSON: 'id'

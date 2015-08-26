@@ -3,8 +3,6 @@ var Guild = Backbone.RelationalModel.extend({
 		name: '',
 		guildCharters: [],
 		guildMemberships: [],
-		createdDate: new Date(),
-		updatedDate: new Date()
 	},
 
 	relations: [
@@ -14,7 +12,7 @@ var Guild = Backbone.RelationalModel.extend({
 			relatedModel: 'GuildCharter',
 			includeInJSON: 'id',
 			collectionType: 'GuildCharterCollection',
-			autoFetch: true,
+			//autoFetch: true,
 			reverseRelation: {
 				key: 'guild',
 				includeInJSON: 'id'
@@ -26,19 +24,13 @@ var Guild = Backbone.RelationalModel.extend({
 			relatedModel: 'GuildMembership',
 			includeInJSON: 'id',
 			collectionType: 'GuildMembershipCollection',
-			autoFetch: true,
+			//autoFetch: true,
 			reverseRelation: {
 				key: 'guild',
 				includeInJSON: 'id'
 			}
 		}
 	],
-
-  parse: function(response) {
-      response.createdDate = new Date(response.createdDate);
-      response.updatedDate = new Date(response.updatedDate);
-      return response;
-  },
 
   urlRoot: 'http://www.kreutzlandry.com/classquest/api/guilds'
 });

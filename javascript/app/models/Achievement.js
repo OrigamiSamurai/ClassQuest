@@ -11,7 +11,7 @@ var Achievement = Backbone.RelationalModel.extend({
 			relatedModel: 'AchievementCertificate',
 			includeInJSON: 'id',
 			collectionType: 'AchievementCertificateCollection',
-			autoFetch: true,
+			//autoFetch: true,
 			reverseRelation: {
 				key: 'achievement',
 				includeInJSON: 'id'

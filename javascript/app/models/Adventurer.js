@@ -25,7 +25,7 @@ var Adventurer = Backbone.RelationalModel.extend({
 			relatedModel: 'Xp',
 			includeInJSON: 'id',
 			collectionType: 'XpCollection',
-			autoFetch: true,
+			//autoFetch: true,
 			reverseRelation: {
 				key: 'adventurer',
 				includeInJSON: 'id'
@@ -37,7 +37,7 @@ var Adventurer = Backbone.RelationalModel.extend({
 			relatedModel: 'QuestLicense',
 			includeInJSON: 'id',
 			collectionType: 'QuestLicenseCollection',
-			autoFetch: true,
+			//autoFetch: true,
 			reverseRelation: {
 				key: 'adventurer',
 				includeInJSON: 'id'
@@ -49,7 +49,7 @@ var Adventurer = Backbone.RelationalModel.extend({
 			relatedModel: 'GuildMembership',
 			includeInJSON: 'id',
 			collectionType: 'GuildMembershipCollection',
-			autoFetch: true,
+			//autoFetch: true,
 			reverseRelation: {
 				key: 'adventurer',
 				includeInJSON: 'id'
@@ -61,7 +61,7 @@ var Adventurer = Backbone.RelationalModel.extend({
 			relatedModel: 'AchievementCertificate',
 			includeInJSON: 'id',
 			collectionType: 'AchievementCertificateCollection',
-			autoFetch: true,
+			//autoFetch: true,
 			reverseRelation: {
 				key: 'adventurer',
 				includeInJSON: 'id'

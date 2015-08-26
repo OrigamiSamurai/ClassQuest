@@ -1,8 +1,6 @@
 var AchievementView = Backbone.Epoxy.View.extend({
 	model: Achievement,
 
-  tagname: "li",
-
 	initialize: function(options){
 
   	_.bindAll(this, 'render','renderAdventurerPicker', 'save', 'renderCertificate', 'onSubmitCertificate', 'onCertificateCreated', 'onCertificateError');
@@ -28,7 +26,7 @@ var AchievementView = Backbone.Epoxy.View.extend({
       "Name: <input type=\"text\" class=\"name\">"+
       "<input type=\"button\" value=\"Save\" class=\"saveButton\" />"+
     	"<input type=\"button\" value=\"Delete\" class=\"deleteButton\" />"+
-      "<br>Adventurer Awardees: <select class=\"adventurerDropdown\"></select>"+
+      "<br>Adventurer Awardees: <select class=\"adventurerPicker\"></select>"+
       "<input type=\"button\" value=\"Add\" class=\"addCertificateButton\" />"+
       "<div class=\"achievementCertificates\">"+
       "</div>"
@@ -47,7 +45,7 @@ var AchievementView = Backbone.Epoxy.View.extend({
   },
 
   onSubmitCertificate: function() {
-    var adventurer = adventurers.get(this.$el.find('.adventurerDropdown')[0].value);
+    var adventurer = adventurers.get(this.$el.find('.adventurerPicker')[0].value);
     var myAdventurers = this.model.attributes.achievementCertificates.pluck('adventurer');
     if (!_.contains(myAdventurers, adventurer)) {
       var achievementCertificate = new AchievementCertificate({achievement:this.model,adventurer:adventurer});
@@ -73,11 +71,8 @@ var AchievementView = Backbone.Epoxy.View.extend({
   },
 
   renderAdventurerPicker: function() {
-    var optionsHtml = '';
-    for (var i=0; i < adventurers.length; i++) {
-      optionsHtml += '<option value=\"'+adventurers.at(i).id+'\">'+adventurers.at(i).attributes.firstName+' '+adventurers.at(i).attributes.lastName+'</option>';
-    };
-    this.$el.find('.adventurerDropdown').html(optionsHtml);
+    var adventurerPicker = new AdventurerPickerView({el:this.$el.find('.adventurerPicker'),model:adventurers})
+    adventurerPicker.render();
   },
 
   delete: function() {

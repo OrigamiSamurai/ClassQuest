@@ -24,7 +24,7 @@ var Sample = Backbone.RelationalModel.extend({
 			relatedModel: 'Relationship',
 			includeInJSON: 'id',
 			collectionType: 'RelationshipCollection',
-			autoFetch: true,
+			//autoFetch: true,
 			reverseRelation: {
 				key: 'relationship',
 				includeInJSON: 'id'
@@ -35,7 +35,7 @@ var Sample = Backbone.RelationalModel.extend({
 			key: 'relatedModel',
 			relatedModel: 'RelatedModel',
 			includeInJSON: 'id',
-			autoFetch: true,
+			//autoFetch: true,
 			reverseRelation: {
 				key: 'reverseRelatedModel',
 				includeInJSON: 'id'

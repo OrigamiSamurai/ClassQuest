@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="javascript/lib/DataTables-1.10.8/css/jquery.dataTables.css"/>
   </head>
   <body>
+    
 
     <h1>Quests</h1>
     <div id="QuestContainer"></div>
@@ -96,6 +97,35 @@
     <script src="javascript/app/collections/EncounterLicenseCollection.js" type="text/javascript"></script>
     <!--<script src="javascript/app/views/EncounterLicenseView.js" type="text/javascript"></script>
     <script src="javascript/app/views/EncounterLicenseCollectionView.js" type="text/javascript"></script>-->
+
+    <script>
+        var CQ = {};
+
+        <?php
+            function bootstrapModel($modelContent, $modelName) {
+                return ' new '.$modelName.'('.json_encode($modelContent).') ';
+            }
+        ?>
+
+        CQ.achievements = new AchievementCollection([
+            <?php 
+                require 'api/controllers/AchievementController.php'; 
+                $achievements = searchAchievements(FALSE, NULL);
+                $achievementsJson = array_map(bootstrapModel,$achievements, array_fill(0, count($achievements), 'Achievement'));
+                echo implode(',', $achievementsJson);
+            ?>
+        ]);
+
+        CQ.achievementCertificates = new AchievementCertificateCollection([
+            <?php 
+                require 'api/controllers/AchievementCertificateController.php'; 
+                $achievementCertificates = searchAchievementCertificates(FALSE, NULL);
+                $achievementCertificatesJson = array_map(bootstrapModel,$achievementCertificates, array_fill(0, count($achievementCertificates), 'AchievementCertificate'));
+                echo implode(',', $achievementCertificatesJson);
+            ?>
+        ]);
+
+    </script>
 
     <script src="javascript/app/app.js" type="text/javascript"></script>
   </body>
