@@ -46,7 +46,6 @@ var EncounterCollectionView = Backbone.Epoxy.View.extend({
 	save: function() {
     this.model.save({}, {
 	    success: function (model, response, options) {
-          model.set({updatedDate:response.updatedDate});
 	    },
 	    error: function (model, xhr, options) {
 	        console.log("Something went wrong while saving the model");

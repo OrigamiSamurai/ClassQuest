@@ -13,16 +13,16 @@ var EncounterView = Backbone.Epoxy.View.extend({
 
   computeds: {
     prettyDate: {
-      deps: ['date'],
-      get: function (date) {
-        return date.getMonth()+'/'+date.getDate()+'/'+date.getFullYear();
+      deps: ['encounterDate'],
+      get: function (encounterDate) {
+        return encounterDate.getMonth()+'/'+encounterDate.getDate()+'/'+encounterDate.getFullYear();
       },
       set: function (value) {
         if (isNaN(Date.parse($('.date').val()))) {
           alert('this aint a properly formatted date, shithead', $('.date').val() );
         }
         else {
-          this.setBinding('date', new Date(Date.parse(this.$el.find('.date').val())));  
+          this.setBinding('encounterDate', new Date(Date.parse(this.$el.find('.date').val())));  
         }
       }
     }
@@ -111,8 +111,6 @@ var EncounterView = Backbone.Epoxy.View.extend({
     self = this;
     this.model.save({}, { 
       success: function (model, response, options) {
-          //model.set({updatedDate:response.updatedDate});
-          //self.renderDate();
       },
       error: function (model, xhr, options) {
           console.log("Something went wrong while saving the model");
