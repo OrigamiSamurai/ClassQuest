@@ -45,3 +45,5 @@ Temporary Items
 .apdisk
 
 classquest.sublime-workspace
+*.php
+error_log
