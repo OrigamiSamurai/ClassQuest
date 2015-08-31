@@ -1,4 +1,4 @@
-var Achievement = Backbone.RelationalModel.extend({
+CQ.Achievement = Backbone.RelationalModel.extend({
 	defaults: {
 		name: '',
 		achievementCertificates: []
@@ -8,9 +8,9 @@ var Achievement = Backbone.RelationalModel.extend({
 		{
 			type: Backbone.HasMany,
 			key: 'achievementCertificates',
-			relatedModel: 'AchievementCertificate',
+			relatedModel: 'CQ.AchievementCertificate',
 			includeInJSON: 'id',
-			collectionType: 'AchievementCertificateCollection',
+			collectionType: 'CQ.AchievementCertificateCollection',
 			//autoFetch: true,
 			reverseRelation: {
 				key: 'achievement',

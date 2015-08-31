@@ -1,11 +1,10 @@
-var AchievementView = Backbone.Epoxy.View.extend({
-	model: Achievement,
+CQ.AchievementView = Backbone.Epoxy.View.extend({
+	model: CQ.Achievement,
 
 	initialize: function(options){
 
   	_.bindAll(this, 'render','renderAdventurerPicker', 'save', 'renderCertificate', 'onSubmitCertificate', 'onCertificateCreated', 'onCertificateError');
     this.model.bind('reset', this.render);
-    adventurers.bind('add', this.renderAdventurerPicker);
     this.model.attributes.achievementCertificates.bind('add', this.renderCertificate);
 
     this.attr = this.model.attributes;
@@ -40,15 +39,15 @@ var AchievementView = Backbone.Epoxy.View.extend({
   },
 
   renderCertificate: function(achievementCertificate) {
-    var achievementCertificateView = new AchievementCertificateView({model:achievementCertificate, collection:this.model.attributes.achievementCertificates});
+    var achievementCertificateView = new CQ.AchievementCertificateView({model:achievementCertificate, collection:this.model.attributes.achievementCertificates});
     this.$el.find('.achievementCertificates').append(achievementCertificateView.render().$el);
   },
 
   onSubmitCertificate: function() {
-    var adventurer = adventurers.get(this.$el.find('.adventurerPicker')[0].value);
+    var adventurer = CQ.adventurers.get(this.$el.find('.adventurerPicker')[0].value);
     var myAdventurers = this.model.attributes.achievementCertificates.pluck('adventurer');
     if (!_.contains(myAdventurers, adventurer)) {
-      var achievementCertificate = new AchievementCertificate({achievement:this.model,adventurer:adventurer});
+      var achievementCertificate = new CQ.AchievementCertificate({achievement:this.model,adventurer:adventurer});
       
       achievementCertificate.save({}, {
         success: this.onCertificateCreated,
@@ -71,7 +70,7 @@ var AchievementView = Backbone.Epoxy.View.extend({
   },
 
   renderAdventurerPicker: function() {
-    var adventurerPicker = new AdventurerPickerView({el:this.$el.find('.adventurerPicker'),model:adventurers})
+    var adventurerPicker = new CQ.AdventurerPickerView({el:this.$el.find('.adventurerPicker'),model:CQ.adventurers})
     adventurerPicker.render();
   },
 

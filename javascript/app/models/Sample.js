@@ -1,4 +1,4 @@
-var Sample = Backbone.RelationalModel.extend({
+CQ.Sample = Backbone.RelationalModel.extend({
 	defaults: {
 		// attributes
 		attribute: '',
@@ -21,9 +21,9 @@ var Sample = Backbone.RelationalModel.extend({
 		{
 			type: Backbone.HasMany,
 			key: 'relationships',
-			relatedModel: 'Relationship',
+			relatedModel: 'CQ.Relationship',
 			includeInJSON: 'id',
-			collectionType: 'RelationshipCollection',
+			collectionType: 'CQ.RelationshipCollection',
 			//autoFetch: true,
 			reverseRelation: {
 				key: 'relationship',
@@ -33,7 +33,7 @@ var Sample = Backbone.RelationalModel.extend({
 		{
 			type: Backbone.HasOne,
 			key: 'relatedModel',
-			relatedModel: 'RelatedModel',
+			relatedModel: 'CQ.RelatedModel',
 			includeInJSON: 'id',
 			//autoFetch: true,
 			reverseRelation: {

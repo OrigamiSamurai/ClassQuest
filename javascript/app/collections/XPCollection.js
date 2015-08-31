@@ -1,5 +1,5 @@
-var XpCollection = Backbone.Collection.extend({
-	model: Xp,
+CQ.XpCollection = Backbone.Collection.extend({
+	model: CQ.Xp,
 	
 	url: 'http://www.kreutzlandry.com/classquest/api/xps'
 });

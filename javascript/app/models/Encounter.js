@@ -1,4 +1,4 @@
-var Encounter = Backbone.RelationalModel.extend({
+CQ.Encounter = Backbone.RelationalModel.extend({
 	defaults: {
 		name: '',
 		maxXp: 1,
@@ -12,9 +12,9 @@ var Encounter = Backbone.RelationalModel.extend({
 		{
 			type: Backbone.HasMany,
 			key: 'xps',
-			relatedModel: 'Xp',
+			relatedModel: 'CQ.Xp',
 			includeInJSON: 'id',
-			collectionType: 'XpCollection',
+			collectionType: 'CQ.XpCollection',
 			//autoFetch: true,
 			reverseRelation: {
 				key: 'encounter',
@@ -24,9 +24,9 @@ var Encounter = Backbone.RelationalModel.extend({
 		{
 			type: Backbone.HasMany,
 			key: 'encounterLicenses',
-			relatedModel: 'EncounterLicense',
+			relatedModel: 'CQ.EncounterLicense',
 			includeInJSON: 'id',
-			collectionType: 'EncounterLicenseCollection',
+			collectionType: 'CQ.EncounterLicenseCollection',
 			//autoFetch: true,
 			reverseRelation: {
 				key: 'encounter',
@@ -35,10 +35,14 @@ var Encounter = Backbone.RelationalModel.extend({
 		}
 	],
 
-  parse: function(response) {
-      response.encounterDate = new Date(response.encounterDate);
-      return response;
-  },
+	initialize: function(options) {
+		this.attributes.encounterDate = new Date(options.encounterDate);
+	},
+
+  	parse: function(response) {
+      	response.encounterDate = new Date(response.encounterDate);
+      	return response;
+  	},
 
   urlRoot: 'http://www.kreutzlandry.com/classquest/api/encounters'
 });

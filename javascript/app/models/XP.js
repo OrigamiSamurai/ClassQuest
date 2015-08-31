@@ -1,7 +1,6 @@
-var Xp = Backbone.RelationalModel.extend({
+CQ.Xp = Backbone.RelationalModel.extend({
     defaults: {
         amount: 0,
-        typeId: 1,
         encounter: null,
         adventurer: null,
         createdDate: new Date(),
@@ -12,6 +11,11 @@ var Xp = Backbone.RelationalModel.extend({
         response.createdDate = new Date(response.createdDate);
         response.updatedDate = new Date(response.updatedDate);
         return response;
+    },
+
+    initialize: function(options) {
+        this.attributes.createdDate = new Date(options.createdDate);
+        this.attributes.updatedDate = new Date(options.updatedDate);
     },
 
     urlRoot: 'http://www.kreutzlandry.com/classquest/api/xps'

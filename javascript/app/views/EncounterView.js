@@ -1,13 +1,12 @@
-var EncounterView = Backbone.Epoxy.View.extend({
-	model: Encounter,
+CQ.EncounterView = Backbone.Epoxy.View.extend({
+	model: CQ.Encounter,
 
   tagname: "li",
 
 	initialize: function(options){
-  	_.bindAll(this, 'render', 'renderAdventurerPicker','renderXp', 'onXpSubmit', 'onXpCreate', 'onXpError');
+  	_.bindAll(this, 'render', 'renderAdventurerPicker','renderEncounterTypePicker','renderXp', 'onXpSubmit', 'onXpCreate', 'onXpError');
 
     this.model.bind('add:xps', this.renderXp);
-
     this.modAttr = this.model.attributes; 
   },
 
@@ -47,7 +46,7 @@ var EncounterView = Backbone.Epoxy.View.extend({
   	this.$el.html(
       "<br>Name: <input type=\"text\" class=\"encounterName\""+
       "<br>Max XP award: <input type=\"text\" class=\"maxXp\">"+
-      "<br>Type: <select class=\"type\">"+xpTypeOptions()+"</select>"+
+      "<br>Type: <select class=\"type\"></select>"+
       "<br>Encountered Date: <input type=\"text\" class=\"date\">"+
       "<br>XP Awarded:"+
       "<div class=\"encounterXpContainer\">"+
@@ -64,6 +63,8 @@ var EncounterView = Backbone.Epoxy.View.extend({
     	"<br><input type=\"button\" value=\"Delete\" class=\"deleteButton\" /><span class=\"maxXp\"></span>"
     );
 
+    this.renderEncounterTypePicker();
+
     this.renderAdventurerPicker();
 
     this.applyBindings();
@@ -72,8 +73,13 @@ var EncounterView = Backbone.Epoxy.View.extend({
   },
 
   renderAdventurerPicker: function() {
-    var adventurerPicker = new AdventurerPickerView({el:this.$el.find('.adventurerPicker'),model:adventurers})
+    var adventurerPicker = new CQ.AdventurerPickerView({el:this.$el.find('.adventurerPicker'),model:CQ.adventurers})
     adventurerPicker.render();
+  },
+
+  renderEncounterTypePicker: function() {
+    var encounterTypePicker = new CQ.EncounterTypePickerView({el:this.$el.find('.type'),model:CQ.encounterTypes})
+    encounterTypePicker.render();
   },
 
   saveType: function() {
@@ -81,8 +87,8 @@ var EncounterView = Backbone.Epoxy.View.extend({
   },
 
   onXpSubmit: function() {
-    var myAdventurer = adventurers.get(this.$el.find('.adventurerPicker')[0].value);
-    var xp = new Xp({amount:parseInt(this.$el.find('.amount').val()), typeId: this.model.typeId, encounter:this.model, adventurer:myAdventurer});
+    var myAdventurer = CQ.adventurers.get(this.$el.find('.adventurerPicker')[0].value);
+    var xp = new CQ.Xp({amount:parseInt(this.$el.find('.amount').val()), typeId: this.model.typeId, encounter:this.model, adventurer:myAdventurer});
     xp.save({}, {
 	    success: this.onCreated,
 	    error: this.onError
@@ -98,7 +104,7 @@ var EncounterView = Backbone.Epoxy.View.extend({
 	},
 
   renderXp: function(model) {
-    var encounterXpView = new EncounterXpView({model:model});
+    var encounterXpView = new CQ.EncounterXpView({model:model});
     this.$el.find('.encounterXpContainer').append(encounterXpView.render().$el);
   },
 

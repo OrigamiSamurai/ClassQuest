@@ -1,4 +1,4 @@
-var QuestLicense = Backbone.RelationalModel.extend({
+CQ.QuestLicense = Backbone.RelationalModel.extend({
 	defaults: {
 		name: '',
 		adventurer: null,

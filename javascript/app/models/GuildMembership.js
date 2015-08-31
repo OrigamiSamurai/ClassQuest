@@ -1,4 +1,4 @@
-var GuildMembership = Backbone.RelationalModel.extend({
+CQ.GuildMembership = Backbone.RelationalModel.extend({
 	defaults: {
 		name: '',
 		guild: null,

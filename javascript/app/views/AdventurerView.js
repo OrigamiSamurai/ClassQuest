@@ -1,5 +1,5 @@
-var AdventurerView = Backbone.Epoxy.View.extend({
-	model: Adventurer,
+CQ.AdventurerView = Backbone.Epoxy.View.extend({
+	model: CQ.Adventurer,
 
   tagname: "li",
 
@@ -61,22 +61,22 @@ var AdventurerView = Backbone.Epoxy.View.extend({
   },
 
   renderQuest: function(model) {
-	var adventurerXpView = new EncounterXpView({model:model});
+	var adventurerXpView = new CQ.EncounterXpView({model:model});
 	this.$el.find('.adventurerQuests').append(adventurerQuestView.render().$el);
   },
 
   renderXp: function(model) {
-	var adventurerXpView = new EncounterXpView({model:model});
+	var adventurerXpView = new CQ.EncounterXpView({model:model});
 	this.$el.find('.adventurerXps').append(adventurerXpView.render().$el);
   },
 
   renderGuild: function(model) {
-	var adventurerXpView = new EncounterXpView({model:model});
+	var adventurerXpView = new CQ.EncounterXpView({model:model});
 	this.$el.find('.adventurerGuilds').append(adventurerGuildView.render().$el);
   },
 
   renderAchievement: function(model) {
-	var adventurerXpView = new EncounterXpView({model:model});
+	var adventurerXpView = new CQ.EncounterXpView({model:model});
 	this.$el.find('.adventurerAchievements').append(adventurerAchievementView.render().$el);
   },
 
@@ -86,7 +86,6 @@ var AdventurerView = Backbone.Epoxy.View.extend({
   },
 
   save: function() {
-	self = this;
 	this.model.save({}, { 
 	  success: function (model, response, options) {
 	  },

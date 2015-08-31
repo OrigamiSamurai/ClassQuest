@@ -1,6 +1,6 @@
-var AdventurerCollectionView = Backbone.Epoxy.View.extend({
+CQ.AdventurerCollectionView = Backbone.Epoxy.View.extend({
 
-	el: $('#AdventurerContainer'),
+	el: '#AdventurerContainer',
 
 	initialize: function() {
 	    _.bindAll(this, 'render', 'renderAdventurer', 'onSubmit', 'onCreated', 'onError');// onsubmits are currently used for saving lower level items
@@ -27,7 +27,7 @@ var AdventurerCollectionView = Backbone.Epoxy.View.extend({
 	},
 
 	renderAdventurer: function(adventurer) {
-		var adventurerView = new AdventurerView({model:adventurer});
+		var adventurerView = new CQ.AdventurerView({model:adventurer});
 		this.$el.append(adventurerView.render().$el);
 	},
 
@@ -40,7 +40,7 @@ var AdventurerCollectionView = Backbone.Epoxy.View.extend({
 	},
 
 	onSubmit: function() {
-		var adventurer = new Adventurer({
+		var adventurer = new CQ.Adventurer({
 			firstName:$('#NewAdventurerFirstName').val(),
 			lastName:$('#NewAdventurerLastName').val(),
 			login:$('#NewAdventurerLogin').val(),

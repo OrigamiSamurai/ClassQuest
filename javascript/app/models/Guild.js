@@ -1,4 +1,4 @@
-var Guild = Backbone.RelationalModel.extend({
+CQ.Guild = Backbone.RelationalModel.extend({
 	defaults: {
 		name: '',
 		guildCharters: [],
@@ -9,9 +9,9 @@ var Guild = Backbone.RelationalModel.extend({
 		{
 			type: Backbone.HasMany,
 			key: 'guildCharters',
-			relatedModel: 'GuildCharter',
+			relatedModel: 'CQ.GuildCharter',
 			includeInJSON: 'id',
-			collectionType: 'GuildCharterCollection',
+			collectionType: 'CQ.GuildCharterCollection',
 			//autoFetch: true,
 			reverseRelation: {
 				key: 'guild',
@@ -21,9 +21,9 @@ var Guild = Backbone.RelationalModel.extend({
 		{
 			type: Backbone.HasMany,
 			key: 'guildMemberships',
-			relatedModel: 'GuildMembership',
+			relatedModel: 'CQ.GuildMembership',
 			includeInJSON: 'id',
-			collectionType: 'GuildMembershipCollection',
+			collectionType: 'CQ.GuildMembershipCollection',
 			//autoFetch: true,
 			reverseRelation: {
 				key: 'guild',

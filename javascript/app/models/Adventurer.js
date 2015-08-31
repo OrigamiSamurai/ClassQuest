@@ -1,4 +1,4 @@
-var Adventurer = Backbone.RelationalModel.extend({
+CQ.Adventurer = Backbone.RelationalModel.extend({
 	defaults: {
 		firstName: '',
 		lastName: '',
@@ -22,9 +22,9 @@ var Adventurer = Backbone.RelationalModel.extend({
 		{
 			type: Backbone.HasMany,
 			key: 'xps',
-			relatedModel: 'Xp',
+			relatedModel: 'CQ.Xp',
 			includeInJSON: 'id',
-			collectionType: 'XpCollection',
+			collectionType: 'CQ.XpCollection',
 			//autoFetch: true,
 			reverseRelation: {
 				key: 'adventurer',
@@ -34,9 +34,9 @@ var Adventurer = Backbone.RelationalModel.extend({
 		{
 			type: Backbone.HasMany,
 			key: 'questLicenses',
-			relatedModel: 'QuestLicense',
+			relatedModel: 'CQ.QuestLicense',
 			includeInJSON: 'id',
-			collectionType: 'QuestLicenseCollection',
+			collectionType: 'CQ.QuestLicenseCollection',
 			//autoFetch: true,
 			reverseRelation: {
 				key: 'adventurer',
@@ -46,9 +46,9 @@ var Adventurer = Backbone.RelationalModel.extend({
 		{
 			type: Backbone.HasMany,
 			key: 'guildMemberships',
-			relatedModel: 'GuildMembership',
+			relatedModel: 'CQ.GuildMembership',
 			includeInJSON: 'id',
-			collectionType: 'GuildMembershipCollection',
+			collectionType: 'CQ.GuildMembershipCollection',
 			//autoFetch: true,
 			reverseRelation: {
 				key: 'adventurer',
@@ -58,9 +58,9 @@ var Adventurer = Backbone.RelationalModel.extend({
 		{
 			type: Backbone.HasMany,
 			key: 'achievementCertificates',
-			relatedModel: 'AchievementCertificate',
+			relatedModel: 'CQ.AchievementCertificate',
 			includeInJSON: 'id',
-			collectionType: 'AchievementCertificateCollection',
+			collectionType: 'CQ.AchievementCertificateCollection',
 			//autoFetch: true,
 			reverseRelation: {
 				key: 'adventurer',

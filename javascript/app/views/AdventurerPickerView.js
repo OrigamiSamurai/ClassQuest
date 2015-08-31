@@ -1,5 +1,5 @@
-var AdventurerPickerView = Backbone.Epoxy.View.extend({
-	model: AdventurerCollection,
+CQ.AdventurerPickerView = Backbone.Epoxy.View.extend({
+	model: CQ.AdventurerCollection,
 
   tagName: 'select',
 

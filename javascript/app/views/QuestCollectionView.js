@@ -1,6 +1,6 @@
-var QuestCollectionView = Backbone.Epoxy.View.extend({
+CQ.QuestCollectionView = Backbone.Epoxy.View.extend({
 
-	el: $('#QuestContainer'),
+	el: '#QuestContainer',
 
 	initialize: function() {
     _.bindAll(this, 'render', 'renderQuest', 'onSubmit', 'onCreated', 'onError');// onsubmits are currently used for saving lower level items
@@ -30,7 +30,7 @@ var QuestCollectionView = Backbone.Epoxy.View.extend({
 	},
 
 	renderQuest: function(quest) {
-		var questView = new QuestView({model:quest});
+		var questView = new CQ.QuestView({model:quest});
 		this.$el.append(questView.render().$el);
 	},
 
@@ -43,7 +43,7 @@ var QuestCollectionView = Backbone.Epoxy.View.extend({
 	},
 
 	onSubmit: function() {
-		var quest = new Quest({
+		var quest = new CQ.Quest({
 			name:$('#NewQuestName').val(),
 			period:$('#NewQuestPeriod').val()
 		});

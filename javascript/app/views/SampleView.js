@@ -1,5 +1,5 @@
-var SampleView = Backbone.Epoxy.View.extend({
-	model: Achievement,
+CQ.SampleView = Backbone.Epoxy.View.extend({
+	model: CQ.Achievement,
 
 	// If it will be repeated, use tagname
   	tagname: "li",
@@ -65,13 +65,13 @@ var SampleView = Backbone.Epoxy.View.extend({
   },
 
   renderCertificate: function(achievementCertificate) {
-    var achievementCertificateView = new AchievementCertificateView({model:achievementCertificate, collection:this.model.attributes.achievementCertificates});
+    var achievementCertificateView = new CQ.AchievementCertificateView({model:achievementCertificate, collection:this.model.attributes.achievementCertificates});
     this.$el.find('.achievementCertificates').append(achievementCertificateView.render().$el);
   },
 
   onSubmitCertificate: function() {
     var adventurer = adventurers.get(this.$el.find('.adventurerDropdown')[0].value);
-    var achievementCertificate = new AchievementCertificate({achievement:this.model,adventurer:adventurer});
+    var achievementCertificate = new CQ.AchievementCertificate({achievement:this.model,adventurer:adventurer});
     
     achievementCertificate.save({}, {
       success: this.onCertificateCreated,

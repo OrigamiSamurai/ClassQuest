@@ -1,5 +1,5 @@
-var QuestView = Backbone.Epoxy.View.extend({
-	model: Quest,
+CQ.QuestView = Backbone.Epoxy.View.extend({
+	model: CQ.Quest,
 
   tagname: "li",
 

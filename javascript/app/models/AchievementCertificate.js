@@ -1,8 +1,13 @@
-var AchievementCertificate = Backbone.RelationalModel.extend({
+CQ.AchievementCertificate = Backbone.RelationalModel.extend({
 	defaults: {
 		adventurer: null,
-		achievement: null
+		achievement: null,
+		createdDate: new Date()
 	},
 
-	urlRoot: 'http://www.kreutzlandry.com/classquest/api/achievementcertificates'
+	urlRoot: 'http://www.kreutzlandry.com/classquest/api/achievementcertificates',
+
+	initialize: function(options) {
+		this.attributes.createdDate = new Date(options.encounterDate);
+	},
 });

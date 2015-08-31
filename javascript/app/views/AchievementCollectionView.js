@@ -1,6 +1,6 @@
-var AchievementCollectionView = Backbone.Epoxy.View.extend({
+CQ.AchievementCollectionView = Backbone.Epoxy.View.extend({
 
-	el: $('#AchievementContainer'),
+	el: '#AchievementContainer',
 
 	initialize: function() {
 		_.bindAll(this, 'render', 'renderAchievement', 'onSubmit', 'onCreated', 'onError');// onsubmits are currently used for saving lower level items
@@ -28,7 +28,7 @@ var AchievementCollectionView = Backbone.Epoxy.View.extend({
 	},
 
 	renderAchievement: function(achievement) {
-		var achievementView = new AchievementView({model:achievement});
+		var achievementView = new CQ.AchievementView({model:achievement});
 		this.$el.append(achievementView.render().$el);
 	},
 
@@ -41,7 +41,7 @@ var AchievementCollectionView = Backbone.Epoxy.View.extend({
 	},
 
 	onSubmit: function() {
-		var achievement = new Achievement({
+		var achievement = new CQ.Achievement({
 			name:$('#NewAchievementName').val(),
 		});
 		achievement.save({}, {

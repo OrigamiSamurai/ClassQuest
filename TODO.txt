@@ -1,5 +1,23 @@
 TODO:
 
+- POST - (done)
+- GET search (no parameters) and read tested
+- PUT - in progress (working up from xps)
+- DELETE
+  - shoudl related models be deleted?
+  - example: adventurer is deleted...
+    - quest should not be deleted
+    - guild should not be deleted
+    - encounter should not be deleted
+    - achievement should not be deleted
+    BUT
+    - quest license is deleted
+    - guild membership deleted
+    - xp is deleted
+    - achievement certificate is deleted
+
+
+
 - add DB support for adventurer in xps table
 - update xp to link to adventurer (model)
 - update php to send/receive adventurer id for xps

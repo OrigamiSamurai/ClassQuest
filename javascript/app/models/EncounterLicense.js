@@ -1,4 +1,4 @@
-var EncounterLicense = Backbone.RelationalModel.extend({
+CQ.EncounterLicense = Backbone.RelationalModel.extend({
 	defaults: {
 		name: '',
 		encounter: null,

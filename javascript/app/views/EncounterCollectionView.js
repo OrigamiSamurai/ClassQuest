@@ -1,6 +1,6 @@
-var EncounterCollectionView = Backbone.Epoxy.View.extend({
+CQ.EncounterCollectionView = Backbone.Epoxy.View.extend({
 
-	el: $('#EncounterContainer'),
+	el: '#EncounterContainer',
 
 	initialize: function() {
 	    _.bindAll(this, 'render', 'renderEncounter', 'onSubmit', 'onCreated', 'onError');// onsubmits are currently used for saving lower level items
@@ -23,7 +23,7 @@ var EncounterCollectionView = Backbone.Epoxy.View.extend({
 	},
 
 	renderEncounter: function(encounter) {
-		var encounterView = new EncounterView({model:encounter});
+		var encounterView = new CQ.EncounterView({model:encounter});
 		this.$el.append(encounterView.render().$el);
 	},
 
@@ -36,7 +36,7 @@ var EncounterCollectionView = Backbone.Epoxy.View.extend({
 	},
 
 	onSubmit: function() {
-		var encounter = new Encounter({name:$('#NewEncounterName').val()});
+		var encounter = new CQ.Encounter({name:$('#NewEncounterName').val()});
 		encounter.save({}, {
 			success: this.onCreated,
 			error: this.onError

@@ -1,6 +1,6 @@
-var GuildCollectionView = Backbone.Epoxy.View.extend({
+CQ.GuildCollectionView = Backbone.Epoxy.View.extend({
 
-	el: $('#GuildContainer'),
+	el: '#GuildContainer',
 
 	initialize: function() {
 		_.bindAll(this, 'render', 'renderGuild', 'onSubmit', 'onCreated', 'onError');// onsubmits are currently used for saving lower level items
@@ -28,7 +28,7 @@ var GuildCollectionView = Backbone.Epoxy.View.extend({
 	},
 
 	renderGuild: function(guild) {
-		var guildView = new GuildView({model:guild});
+		var guildView = new CQ.GuildView({model:guild});
 		this.$el.append(guildView.render().$el);
 	},
 
@@ -41,7 +41,7 @@ var GuildCollectionView = Backbone.Epoxy.View.extend({
 	},
 
 	onSubmit: function() {
-		var guild = new Guild({
+		var guild = new CQ.Guild({
 			name:$('#NewGuildName').val(),
 		});
 		guild.save({}, {
