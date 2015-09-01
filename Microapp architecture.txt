@@ -1,0 +1,46 @@
+Microapp architecture
+- Modules (mini-apps with a single function)
+  - provide a namespace for the mini app
+
+- Controllers
+  - handle interactions between user intentions (DOM) and data
+
+- Views
+  - Wrap the dom and communicate user intents (via events)
+  - communicate to controller
+
+- Models / Collections
+  - Contain raw data
+  - communicate to controller
+
+- App
+  - instantiate collections, models, views
+  - inject dependencies and wire objects together at a high level
+
+
+For instance:
+
+Module - Thesaurus
+App - Thesaurus.App
+Data - Thesaurus.ResultsCollection
+Controller - Thesaurus.SearchController, Thesaurs.ResultsController
+View - Thesaurus.SearchView, Thesaurus.ResultsView
+
+
+For the ClassQuest...
+
+Quests Module
+
+App: Quests.App
+Data: Quests.QuestCollection
+View: Quest.QuestListView, Quest.QuestAddView, Quest.QuestEditView
+Controller: Quest.QuestListController, Quest.QuestAddController, Quest.QuestEditController
+
+
+On the Quests Page:
+
+- Show list of quests
+  - show button to delete quest
+  - show button to edit quest
+- Show button to add quests
+- 
