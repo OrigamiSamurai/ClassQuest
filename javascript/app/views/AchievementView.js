@@ -1,5 +1,5 @@
-CQ.AchievementView = Backbone.Epoxy.View.extend({
-	model: CQ.Achievement,
+CQ.Views.AchievementView = Backbone.Epoxy.View.extend({
+	model: CQ.Models.Achievement,
 
 	initialize: function(options){
 
@@ -39,7 +39,7 @@ CQ.AchievementView = Backbone.Epoxy.View.extend({
   },
 
   renderCertificate: function(achievementCertificate) {
-    var achievementCertificateView = new CQ.AchievementCertificateView({model:achievementCertificate, collection:this.model.attributes.achievementCertificates});
+    var achievementCertificateView = new CQ.Views.AchievementCertificateView({model:achievementCertificate, collection:this.model.attributes.achievementCertificates});
     this.$el.find('.achievementCertificates').append(achievementCertificateView.render().$el);
   },
 
@@ -47,7 +47,7 @@ CQ.AchievementView = Backbone.Epoxy.View.extend({
     var adventurer = CQ.adventurers.get(this.$el.find('.adventurerPicker')[0].value);
     var myAdventurers = this.model.attributes.achievementCertificates.pluck('adventurer');
     if (!_.contains(myAdventurers, adventurer)) {
-      var achievementCertificate = new CQ.AchievementCertificate({achievement:this.model,adventurer:adventurer});
+      var achievementCertificate = new CQ.Models.AchievementCertificate({achievement:this.model,adventurer:adventurer});
       
       achievementCertificate.save({}, {
         success: this.onCertificateCreated,
@@ -70,7 +70,7 @@ CQ.AchievementView = Backbone.Epoxy.View.extend({
   },
 
   renderAdventurerPicker: function() {
-    var adventurerPicker = new CQ.AdventurerPickerView({el:this.$el.find('.adventurerPicker'),model:CQ.adventurers})
+    var adventurerPicker = new CQ.Views.AdventurerPickerView({el:this.$el.find('.adventurerPicker'),model:CQ.adventurers})
     adventurerPicker.render();
   },
 

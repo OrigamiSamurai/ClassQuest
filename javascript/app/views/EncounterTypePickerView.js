@@ -1,5 +1,5 @@
-CQ.EncounterTypePickerView = Backbone.Epoxy.View.extend({
-	model: CQ.EncounterTypeCollection,
+CQ.Views.EncounterTypePickerView = Backbone.Epoxy.View.extend({
+	model: CQ.Collections.EncounterTypeCollection,
 
   tagName: 'select',
 

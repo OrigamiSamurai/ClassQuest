@@ -1,4 +1,4 @@
-CQ.AdventurerCollectionView = Backbone.Epoxy.View.extend({
+CQ.Views.AdventurerCollectionView = Backbone.Epoxy.View.extend({
 
 	el: '#AdventurerContainer',
 
@@ -27,7 +27,7 @@ CQ.AdventurerCollectionView = Backbone.Epoxy.View.extend({
 	},
 
 	renderAdventurer: function(adventurer) {
-		var adventurerView = new CQ.AdventurerView({model:adventurer});
+		var adventurerView = new CQ.Views.AdventurerView({model:adventurer});
 		this.$el.append(adventurerView.render().$el);
 	},
 
@@ -40,7 +40,7 @@ CQ.AdventurerCollectionView = Backbone.Epoxy.View.extend({
 	},
 
 	onSubmit: function() {
-		var adventurer = new CQ.Adventurer({
+		var adventurer = new CQ.Models.Adventurer({
 			firstName:$('#NewAdventurerFirstName').val(),
 			lastName:$('#NewAdventurerLastName').val(),
 			login:$('#NewAdventurerLogin').val(),

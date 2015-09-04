@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"supp",
+				"suppressedColumns"
+			],
+			[
+				"Adv",
+				"Adventurer"
+			],
+			[
+				"l",
+				"lastName"
+			],
+			[
+				"achievementC",
+				"achievementCertificates"
+			],
+			[
 				"xp",
 				"xpAmounts"
 			],
@@ -227,7 +243,7 @@
 			"file": "javascript/app/models/Quest.js",
 			"settings":
 			{
-				"buffer_size": 1277,
+				"buffer_size": 1018,
 				"line_ending": "Windows"
 			}
 		},
@@ -235,7 +251,7 @@
 			"file": "javascript/app/models/Loot.js",
 			"settings":
 			{
-				"buffer_size": 157,
+				"buffer_size": 0,
 				"line_ending": "Windows"
 			}
 		},
@@ -243,7 +259,7 @@
 			"file": "javascript/app/collections/LootCollection.js",
 			"settings":
 			{
-				"buffer_size": 131,
+				"buffer_size": 0,
 				"line_ending": "Windows"
 			}
 		},
@@ -251,7 +267,31 @@
 			"file": "javascript/app/views/LootView.js",
 			"settings":
 			{
-				"buffer_size": 153,
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "javascript/app/views/GuildView.js",
+			"settings":
+			{
+				"buffer_size": 1098,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "javascript/app/views/QuestView.js",
+			"settings":
+			{
+				"buffer_size": 1437,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "javascript/app/views/QuestCollectionView.js",
+			"settings":
+			{
+				"buffer_size": 1646,
 				"line_ending": "Windows"
 			}
 		},
@@ -259,16 +299,34 @@
 			"file": "javascript/app/models/EncounterLicense.js",
 			"settings":
 			{
-				"buffer_size": 196,
+				"buffer_size": 195,
 				"line_ending": "Windows",
 				"name": "var EncounterLicense = Backbone.RelationalModel.ex"
+			}
+		},
+		{
+			"file": "javascript/app/models/EncounterType.js",
+			"settings":
+			{
+				"buffer_size": 104,
+				"line_ending": "Windows",
+				"name": "var CQ.EncounterType = Backbone.Model.extend({"
+			}
+		},
+		{
+			"file": "javascript/app/collections/EncounterTypeCollection.js",
+			"settings":
+			{
+				"buffer_size": 157,
+				"line_ending": "Windows",
+				"name": "CQ.EncounterTypeCollection = Backbone.Collection.e"
 			}
 		},
 		{
 			"file": "javascript/app/collections/EncounterLicenseCollection.js",
 			"settings":
 			{
-				"buffer_size": 161,
+				"buffer_size": 163,
 				"line_ending": "Windows"
 			}
 		},
@@ -276,7 +334,7 @@
 			"file": "javascript/app/models/QuestLicense.js",
 			"settings":
 			{
-				"buffer_size": 189,
+				"buffer_size": 188,
 				"line_ending": "Windows"
 			}
 		},
@@ -284,7 +342,7 @@
 			"file": "javascript/app/collections/QuestLicenseCollection.js",
 			"settings":
 			{
-				"buffer_size": 149,
+				"buffer_size": 151,
 				"line_ending": "Windows"
 			}
 		},
@@ -292,7 +350,7 @@
 			"file": "javascript/app/collections/GuildMembershipCollection.js",
 			"settings":
 			{
-				"buffer_size": 155,
+				"buffer_size": 160,
 				"line_ending": "Windows"
 			}
 		},
@@ -300,7 +358,7 @@
 			"file": "javascript/app/models/GuildMembership.js",
 			"settings":
 			{
-				"buffer_size": 192,
+				"buffer_size": 191,
 				"line_ending": "Windows"
 			}
 		},
@@ -308,15 +366,25 @@
 			"file": "javascript/app/views/EncounterView.js",
 			"settings":
 			{
-				"buffer_size": 3692,
+				"buffer_size": 3891,
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "Searching 128 files for \"formatDate(\"\n\n0 matches across 0 files\n\n\nSearching 128 files for \"formatDate\"\n\nD:\\Dropbox\\Richard\\CODING\\ClassQuest\\javascript\\app\\app.js:\n    1: CQ.formatDate = function(date) {\n    2    var hours = date.getHours();\n    3    var minutes = date.getMinutes();\n\n1 match in 1 file\n\n\nSearching 128 files for \"blah\"\n\nD:\\Dropbox\\Richard\\CODING\\ClassQuest\\javascript\\app\\views\\QuestCollectionView.js:\n   21  \n   22  	render: function() {\n   23: 	    console.log('blah',this.el);\n   24  		this.$el.html(\"<input type=\\\"button\\\" id=\\\"CreateQuest\\\" value=\\\"Create Quest\\\" />\"+\n   25  			\"<br>Period: <input type=\\\"text\\\" id=\\\"NewQuestPeriod\\\">\"+\n\n1 match in 1 file\n",
+			"settings":
+			{
+				"buffer_size": 679,
+				"line_ending": "Windows",
+				"name": "Find Results",
+				"scratch": true
 			}
 		},
 		{
 			"file": "javascript/app/models/GuildCharter.js",
 			"settings":
 			{
-				"buffer_size": 184,
+				"buffer_size": 183,
 				"line_ending": "Windows"
 			}
 		},
@@ -324,7 +392,7 @@
 			"file": "javascript/app/collections/GuildCharterCollection.js",
 			"settings":
 			{
-				"buffer_size": 149,
+				"buffer_size": 151,
 				"line_ending": "Windows"
 			}
 		},
@@ -332,7 +400,7 @@
 			"file": "javascript/app/models/Adventurer.js",
 			"settings":
 			{
-				"buffer_size": 1909,
+				"buffer_size": 1730,
 				"line_ending": "Windows"
 			}
 		},
@@ -340,7 +408,7 @@
 			"file": "javascript/app/views/AdventurerView.js",
 			"settings":
 			{
-				"buffer_size": 2547,
+				"buffer_size": 2718,
 				"line_ending": "Windows"
 			}
 		},
@@ -348,7 +416,7 @@
 			"file": "javascript/app/models/Encounter.js",
 			"settings":
 			{
-				"buffer_size": 1024,
+				"buffer_size": 1000,
 				"line_ending": "Windows"
 			}
 		},
@@ -356,15 +424,23 @@
 			"file": "javascript/app/models/Guild.js",
 			"settings":
 			{
-				"buffer_size": 952,
+				"buffer_size": 733,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "test.html",
+			"file": "test.php",
 			"settings":
 			{
-				"buffer_size": 5181,
+				"buffer_size": 8212,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "<?php\n\nrequire 'Slim/Slim.php';\n\\Slim\\Slim::registerAutoloader();\n\nrequire 'api/utilities.php';\n\n$app = new \\Slim\\Slim();\n\n// API\n$app->group('/api', function () use ($app) {\n\n	// Headers\n	$app->response->headers->set('Content-Type', 'application/json');\n	$app->response->headers->set('Access-Control-Allow-Origin','*');\n	$app->response->headers->set('Access-Control-Allow-Headers','Content-Type');\n	$app->response->headers->set('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');\n	\n	// OPTIONS\n	$app->options('/:any+', function () use ($app) {\n	    $app->stop();\n	});\n	\n	/***********************************\n 	*** Achievement Handling\n	***********************************/\n	$app->group('/achievements', function() use ($app) {\n		$app->get('/', function () use ($app) {\n		    require 'api/controllers/AchievementController.php';\n		    searchAchievements($true, $app);\n		});\n		$app->post('/', function () use ($app) {\n		    require 'api/controllers/AchievementController.php';\n		    createAchievement($app);\n		});\n		$app->get('/:id', function ($id) use ($app) {\n		    require 'api/controllers/AchievementController.php';\n		    readAchievement($app, $id);\n		});\n		$app->put('/:id', function ($id) use ($app) {\n		    require 'api/controllers/AchievementController.php';\n		    updateAchievement($app, $id);\n		});\n		$app->delete('/:id',function ($id) use ($app) {\n		    require 'api/controllers/AchievementController.php';\n		    deleteAchievement($app, $id);\n		});\n	});\n	\n	/***********************************\n 	*** Achievement Certificate Handling\n	***********************************/\n	$app->group('/achievementcertificates', function() use ($app) {\n		$app->get('/', function () use ($app) {\n		    require 'api/controllers/AchievementCertificateController.php';\n		    searchAchievementCertificates($app);\n		});\n		$app->post('/', function () use ($app) {\n		    require 'api/controllers/AchievementCertificateController.php';\n		    createAchievementCertificate($app);\n		});\n		$app->get('/:id', function ($id) use ($app) {\n		    require 'api/controllers/AchievementCertificateController.php';\n		    readAchievementCertificate($app, $id);\n		});\n		$app->put('/:id', function ($id) use ($app) {\n		    require 'api/controllers/AchievementCertificateController.php';\n		    updateAchievementCertificate($app, $id);\n		});\n		$app->delete('/:id',function ($id) use ($app) {\n		    require 'api/controllers/AchievementCertificateController.php';\n		    deleteAchievementCertificate($app, $id);\n		});\n	});\n	\n	/***********************************\n 	*** Adventurer Handling\n	***********************************/\n	$app->group('/adventurers', function() use ($app) {\n		$app->get('/', function () use ($app) {\n		    require 'api/controllers/AdventurerController.php';\n		    searchAdventurers($app);\n		});\n		$app->post('/', function () use ($app) {\n		    require 'api/controllers/AdventurerController.php';\n		    createAdventurer($app);\n		});\n		$app->get('/:id', function ($id) use ($app) {\n		    require 'api/controllers/AdventurerController.php';\n		    readAdventurer($app, $id);\n		});\n		$app->put('/:id', function ($id) use ($app) {\n		    require 'api/controllers/AdventurerController.php';\n		    updateAdventurer($app, $id);\n		});\n		$app->delete('/:id',function ($id) use ($app) {\n		    require 'api/controllers/AdventurerController.php';\n		    deleteAdventurer($app, $id);\n		});\n	});\n	\n	/***********************************\n 	*** Encounter Handling\n	***********************************/\n	$app->group('/encounters', function() use ($app) {\n		$app->get('/', function () use ($app) {\n		    require 'api/controllers/EncounterController.php';\n		    searchEncounters($app);\n		});\n		$app->post('/', function () use ($app) {\n		    require 'api/controllers/EncounterController.php';\n		    createEncounter($app);\n		});\n		$app->get('/:id', function ($id) use ($app) {\n		    require 'api/controllers/EncounterController.php';\n		    readEncounter($app, $id);\n		});\n		$app->put('/:id', function ($id) use ($app) {\n		    require 'api/controllers/EncounterController.php';\n		    updateEncounter($app, $id);\n		});\n		$app->delete('/:id',function ($id) use ($app) {\n		    require 'api/controllers/EncounterController.php';\n		    deleteEncounter($app, $id);\n		});\n	});\n	\n	/***********************************\n 	*** Encounter License Handling\n	***********************************/\n	$app->group('/encounterlicenses', function() use ($app) {\n		$app->get('/', function () use ($app) {\n		    require 'api/controllers/EncounterLicenseController.php';\n		    searchLicenses($app);\n		});\n		$app->post('/', function () use ($app) {\n		    require 'api/controllers/LicenseController.php';\n		    createLicense($app);\n		});\n		$app->get('/:id', function ($id) use ($app) {\n		    require 'api/controllers/LicenseController.php';\n		    readLicense($app, $id);\n		});\n		$app->put('/:id', function ($id) use ($app) {\n		    require 'api/controllers/LicenseController.php';\n		    updateLicense($app, $id);\n		});\n		$app->delete('/:id',function ($id) use ($app) {\n		    require 'api/controllers/LicenseController.php';\n		    deleteLicense($app, $id);\n		});\n	});\n	\n	/***********************************\n 	*** Guild Handling\n	***********************************/\n	$app->group('/guilds', function() use ($app) {\n		$app->get('/', function () use ($app) {\n		    require 'api/controllers/GuildController.php';\n		    searchGuilds($app);\n		});\n		$app->post('/', function () use ($app) {\n		    require 'api/controllers/GuildController.php';\n		    createGuild($app);\n		});\n		$app->get('/:id', function ($id) use ($app) {\n		    require 'api/controllers/GuildController.php';\n		    readGuild($app, $id);\n		});\n		$app->put('/:id', function ($id) use ($app) {\n		    require 'api/controllers/GuildController.php';\n		    updateGuild($app, $id);\n		});\n		$app->delete('/:id',function ($id) use ($app) {\n		    require 'api/controllers/GuildController.php';\n		    deleteGuild($app, $id);\n		});\n	});\n	\n	/***********************************\n 	*** Guild Charter Handling\n	***********************************/\n	$app->group('/guildcharters', function() use ($app) {\n		$app->get('/', function () use ($app) {\n		    require 'api/controllers/GuildCharterController.php';\n		    searchGuildCharters($app);\n		});\n		$app->post('/', function () use ($app) {\n		    require 'api/controllers/GuildCharterController.php';\n		    createGuildCharter($app);\n		});\n		$app->get('/:id', function ($id) use ($app) {\n		    require 'api/controllers/GuildCharterController.php';\n		    readGuildCharter($app, $id);\n		});\n		$app->put('/:id', function ($id) use ($app) {\n		    require 'api/controllers/GuildCharterController.php';\n		    updateGuildCharter($app, $id);\n		});\n		$app->delete('/:id',function ($id) use ($app) {\n		    require 'api/controllers/GuildCharterController.php';\n		    deleteGuildCharter($app, $id);\n		});\n	});\n	\n	/***********************************\n 	*** Guild Membership Handling\n	***********************************/\n	$app->group('/guildmemberships', function() use ($app) {\n		$app->get('/', function () use ($app) {\n		    require 'api/controllers/GuildMembershipController.php';\n		    searchGuildMemberships($app);\n		});\n		$app->post('/', function () use ($app) {\n		    require 'api/controllers/GuildMembershipController.php';\n		    createGuildMembership($app);\n		});\n		$app->get('/:id', function ($id) use ($app) {\n		    require 'api/controllers/GuildMembershipController.php';\n		    readGuildMembership($app, $id);\n		});\n		$app->put('/:id', function ($id) use ($app) {\n		    require 'api/controllers/GuildMembershipController.php';\n		    updateGuildMembership($app, $id);\n		});\n		$app->delete('/:id',function ($id) use ($app) {\n		    require 'api/controllers/GuildMembershipController.php';\n		    deleteGuildMembership($app, $id);\n		});\n	});\n	\n	/***********************************\n 	*** Quest Handling\n	***********************************/\n	$app->group('/quests', function() use ($app) {\n\n		$app->get('/', function () use ($app) {\n		    require 'api/controllers/QuestController.php';\n		    searchQuests($app);\n		});\n		$app->post('/', function () use ($app) {\n		    require 'api/controllers/QuestController.php';\n		    createQuest($app);\n		});\n		$app->get('/:id', function ($id) use ($app) {\n		    require 'api/controllers/QuestController.php';\n		    readQuest($app, $id);\n		});\n		$app->put('/:id', function ($id) use ($app) {\n		    require 'api/controllers/QuestController.php';\n		    updateQuest($app, $id);\n		});\n		$app->delete('/:id',function ($id) use ($app) {\n		    require 'api/controllers/QuestController.php';\n		    deleteQuest($app, $id);\n		});\n	});\n	\n	/***********************************\n 	*** QuestLicense Handling\n	***********************************/\n	$app->group('/questlicenses', function() use ($app) {\n\n		$app->get('/', function () use ($app) {\n		    require 'api/controllers/QuestLicenseController.php';\n		    searchQuestLicenses($app);\n		});\n		$app->post('/', function () use ($app) {\n		    require 'api/controllers/QuestLicenseController.php';\n		    createQuestLicense($app);\n		});\n		$app->get('/:id', function ($id) use ($app) {\n		    require 'api/controllers/QuestLicenseController.php';\n		    readQuestLicense($app, $id);\n		});\n		$app->put('/:id', function ($id) use ($app) {\n		    require 'api/controllers/QuestLicenseController.php';\n		    updateQuestLicense($app, $id);\n		});\n		$app->delete('/:id',function ($id) use ($app) {\n		    require 'api/controllers/QuestLicenseController.php';\n		    deleteQuestLicense($app, $id);\n		});\n	});\n		\n	/***********************************\n 	*** XP Handling\n	***********************************/\n	$app->group('/xps', function() use ($app) {\n\n		$app->get('/', function () use ($app) {\n		    require 'api/controllers/XpController.php';\n		    searchXps($app);\n		});\n		$app->post('/', function () use ($app) {\n		    require 'api/controllers/XpController.php';\n		    createXp($app);\n		});\n		$app->get('/:id', function ($id) use ($app) {\n		    require 'api/controllers/XpController.php';\n		    readXp($app, $id);\n		});\n		$app->put('/:id', function ($id) use ($app) {\n		    require 'api/controllers/XpController.php';\n		    updateXp($app, $id);\n		});\n		$app->delete('/:id',function ($id) use ($app) {\n		    require 'api/controllers/XpController.php';\n		    deleteXp($app, $id);\n		});\n	});\n\n\n});\n\n$app->run();\n\n?>",
+			"settings":
+			{
+				"buffer_size": 10285,
 				"line_ending": "Windows"
 			}
 		},
@@ -372,7 +448,7 @@
 			"file": "javascript/app/app.js",
 			"settings":
 			{
-				"buffer_size": 5185,
+				"buffer_size": 363,
 				"line_ending": "Windows"
 			}
 		},
@@ -381,6 +457,353 @@
 			"settings":
 			{
 				"buffer_size": 1610,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "javascript/app/views/GuildCollectionView.js",
+			"settings":
+			{
+				"buffer_size": 1498,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "javascript/app/collections/GuildCollection.js",
+			"settings":
+			{
+				"buffer_size": 130,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "javascript/app/collections/QuestCollection.js",
+			"settings":
+			{
+				"buffer_size": 130,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "javascript/app/collections/XpCollection.js",
+			"settings":
+			{
+				"buffer_size": 122,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "javascript/app/views/AchievementAdventurerView.js",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "javascript/app/views/AchievementView.js",
+			"settings":
+			{
+				"buffer_size": 3065,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "<?php\n\nclass Model {\n\n	public $id;\n\n	abstract public function convertFromSql($dbResult);\n\n	abstract public function convertToJson($model);\n\n	abstract public function getRelatedIds($relatedTable, $columnName) use ($id);\n\n	abstract public function deleteRelatedIds($relatedTable) use ($id);\n\n	abstract public function dbSearch($tableName);\n\n	abstract public function dbCreate($tableName, $columnNames, $values, $valueTypes);\n\n	abstract public function dbRead($tableName) use ($id);\n\n	abstract public function dbUpdate($tableName, $columnNames, $values, $valueTypes) use ($id);\n\n	abstract public function dbDelete($tableName) use ($id)\n\n}\n\n\nclass Controller {\n	\n	public $columnsInfo = [];\n\n	abstract public function convert($dbResult);\n		\n	public function convertMany($dbResults) {\n	    $models = array();\n	    foreach($dbResults as $row) {\n	         $models[] = convert($row);\n	    }\n	    return $models;\n	}\n	\n	public function getRelatedIds($relatedTable, $indexColumnName, $indexId) {\n	    $pdo = Database::connect();\n	    $sql = 'SELECT id FROM '.$relatedTable.' WHERE '.$indexColumnName.' = '.$indexId;\n	    $statement = $pdo->prepare($sql);\n	    $statement->execute();\n	    $relatedIds = array_map(create_function('$o', 'return (int)$o[\"id\"];'), $statement->fetchAll(PDO::FETCH_ASSOC));\n	    return $relatedIds;    \n	}\n	\n	public function create($tableName, $columnsInfo, $values, $app = NULL) {\n	\n	    $model = json_decode($app->request->getBody());\n	   \n	    validate($app, $model);\n	   \n	    $pdo = Database::connect();\n	    $query = 'INSERT INTO '.$tableName.' ('. implode(',',array_keys($columnsInfo)). ') VALUES ('. implode(',',array_fill(0,count($values),'?').')';\n	    \n	    $statement = $pdo->prepare($query)\n	    \n	    for (var i=0; i < count($columnsInfo); i++) {\n	      $statement->bindValue(i+1, $values[i], $columnsInfo[i]);\n	    }\n	    	    \n	    $statement->execute();\n	    \n	    $insertedId = $pdo->lastInsertId();\n	    $result = readRecord($app, 'SELECT * FROM ' . $tableName . ' WHERE id = ' . $insertedId, $recordType, $insertedId);\n	    \n	    $dbResult = insertRecord($app, $query, $tableName);\n	    \n	    return convert($dbResult);\n	    //respondSuccess($app, 201, convert($dbResult));\n	};\n	\n	public function read($tableName, $id, $app = NULL) {\n	    $pdo = Database::connect();    \n	    $query = 'SELECT * FROM '.$tableName.' WHERE id = '.$id.' LIMIT 1';\n	    $result = readRecord($app, $query, 'encounter', $id);\n	    \n	    respondSuccess($app, 200, convert($result));\n	};\n	\n	public function search($tableName, $app = NULL) {\n	    $pdo = Database::connect();\n	    $sql = 'SELECT * FROM '.$tableName;\n	    $statement = $pdo->prepare($sql);\n	    $statement->execute();\n	    $results=$statement->fetchAll(PDO::FETCH_ASSOC);\n	    if (!is_null($app)) {\n		respondSuccess($app, 200, convertMany($results));\n	    }\n	    else {\n	    	else return convertMany($results);\n	    }\n	};\n	\n	public function update($tableName, $id, $columnNames, $columnValues, $app) {\n	    $model = json_decode($app->request->getBody());\n	\n	    validate($app, $model);\n	\n	    $query = 'UPDATE '.$tableName.' SET /* INSERT COLUMN NAMES AND VALUES******************************* */ WHERE id = '.$id; \n	    $dbResult = updateRecord($app, $query, $tableName, $id);\n	    respondSuccess($app, 200, convert($dbResult));\n	    	        \n	};\n	\n	public function delete($tableName, $id, $app) {\n	    if (!$id) {\n	        respondError($app, \"id value to delete is missing.\", $app->request->getBody());\n	    }\n	    if (!isInteger($id)) {\n	        respondError($app, \"id value was not an integer.\", $id);\n	    }\n	    \n	    $query = 'DELETE FROM encounters WHERE id = ' . $id;\n	    deleteRecord($app, $query, 'encounter', $id);\n	};\n	\n	abstract function deleteRelations($tableNames, $columnNames, $id, $app);\n	\n	abstract function validate($model, $app); \n\n};\n\n?>",
+			"settings":
+			{
+				"buffer_size": 3836,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "javascript/app/models/Achievement.js",
+			"settings":
+			{
+				"buffer_size": 496,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "javascript/app/views/AdventurerPickerView.js",
+			"settings":
+			{
+				"buffer_size": 589,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "javascript/app/views/EncounterTypePickerView.js",
+			"settings":
+			{
+				"buffer_size": 573,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "javascript/app/views/SampleView.js",
+			"settings":
+			{
+				"buffer_size": 3857,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "javascript/app/models/Sample.js",
+			"settings":
+			{
+				"buffer_size": 1571,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "javascript/app/views/AchievementCertificateView.js",
+			"settings":
+			{
+				"buffer_size": 1287,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": ".gitignore",
+			"settings":
+			{
+				"buffer_size": 641,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "<?php\nclass Controller {\n	\n	static function create($app, $modelType) {\n		$model = $modelType::parseJson($app->request->getBody());\n		$newModel = $model->save();\n		if (is_null($app)) {\n			return $newModel;\n		}\n		else {\n			$app->response->setBody($newModel->getJson());\n			$app->response->setStatus(201);\n			$app->stop();\n		}\n	}\n	\n	static function read($app, $modelType, $id) {\n		$model = $modelType::fetch($id);\n		\n		if (is_null($app)) {\n			return $model;\n		}\n		else {\n			$app->response->setBody($model->getJson());\n			$app->response->setStatus(200);\n			$app->stop();\n		}\n	}\n	\n	static function search($app, $modelType) {\n\n		$models = $modelType::fetchAll();		\n		if(is_null($app)) {\n			return $models;\n		} \n		else {	\n			$resp = '[';		\n			if (count($models) > 0) {\n				$jsonArray = [];\n				\n				foreach($models as $model) {\n					array_push($jsonArray, $model->getJson());\n				};\n				$resp .= implode(',',$jsonArray);\n			}\n			$resp .= ']';\n\n			$app->response->setBody($resp);\n			$app->response->setStatus(200);\n			$app->stop();\n		}\n	}\n	\n	static function update($app, $modelType, $id) {\n		$model = $modelType::parse($app->request->getBody());\n		$updatedModel = $model->save();\n		\n		if (is_null($app)) {\n			return $updatedModel;\n		}\n		else {\n			$app->response->setBody($updatedModel->getJson());\n			$app->response->setStatus(200);\n			$app->stop();           \n		}\n	}\n	\n	static function delete($app, $modelType, $id) {\n		$modelType::delete($id);\n		\n		if (is_null) {\n			// do nothing\n		}\n		else {\n			$app->response->setStatus(204);\n			$app->stop();\n		}\n	}\n};\n\n?>",
+			"file": "api/controllers/Controller.class.php",
+			"file_size": 1639,
+			"file_write_time": 130854704860000000,
+			"settings":
+			{
+				"buffer_size": 1553,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "api/models/EncounterType.class.php",
+			"settings":
+			{
+				"buffer_size": 1221,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "api/models/EncounterLicense.class.php",
+			"settings":
+			{
+				"buffer_size": 1265,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "api/models/GuildCharter.class.php",
+			"settings":
+			{
+				"buffer_size": 1218,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "api/models/GuildMembership.class.php",
+			"settings":
+			{
+				"buffer_size": 1287,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "api/models/QuestLicense.class.php",
+			"settings":
+			{
+				"buffer_size": 1273,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "api/models/Xp.class.php",
+			"settings":
+			{
+				"buffer_size": 2561,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "javascript/app/models/AchievementCertificate.js",
+			"settings":
+			{
+				"buffer_size": 333,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "javascript/app/models/Xp.js",
+			"settings":
+			{
+				"buffer_size": 659,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "javascript/app/collections/SampleCollection.js",
+			"settings":
+			{
+				"buffer_size": 118,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "javascript/app/collections/EncounterCollection.js",
+			"settings":
+			{
+				"buffer_size": 142,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "javascript/app/collections/AdventurerCollection.js",
+			"settings":
+			{
+				"buffer_size": 145,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "javascript/app/collections/AchievementCollection.js",
+			"settings":
+			{
+				"buffer_size": 148,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "javascript/app/collections/AchievementCertificateCollection.js",
+			"settings":
+			{
+				"buffer_size": 181,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "javascript/app/views/XpView.js",
+			"settings":
+			{
+				"buffer_size": 45,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "javascript/app/views/XpCollectionView.js",
+			"settings":
+			{
+				"buffer_size": 175,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "javascript/app/views/EncounterXpView.js",
+			"settings":
+			{
+				"buffer_size": 1640,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "javascript/app/views/EncounterCollectionView.js",
+			"settings":
+			{
+				"buffer_size": 1450,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "javascript/app/views/AdventurerCollectionView.js",
+			"settings":
+			{
+				"buffer_size": 1905,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "javascript/app/views/AchievementCollectionView.js",
+			"settings":
+			{
+				"buffer_size": 1648,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "api/models/Model.class.php",
+			"settings":
+			{
+				"buffer_size": 5086,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "api/models/AchievementCertificate.class.php",
+			"settings":
+			{
+				"buffer_size": 1829,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "api/utilities.php",
+			"settings":
+			{
+				"buffer_size": 3141,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "api/models/Encounter.class.php",
+			"settings":
+			{
+				"buffer_size": 2478,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "api/database.php",
+			"settings":
+			{
+				"buffer_size": 3730,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "api/models/Adventurer.class.php",
+			"settings":
+			{
+				"buffer_size": 3150,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "api/models/Achievement.class.php",
+			"settings":
+			{
+				"buffer_size": 1336,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "api/models/Guild.class.php",
+			"settings":
+			{
+				"buffer_size": 1606,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "api/models/Quest.class.php",
+			"settings":
+			{
+				"buffer_size": 1821,
 				"line_ending": "Windows"
 			}
 		}
@@ -409,6 +832,8 @@
 	},
 	"file_history":
 	[
+		"/D/Dropbox/Richard/CODING/ClassQuest/javascript/app/setup.js",
+		"/C/Users/Richard/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
 		"/D/Dropbox/Richard/CODING/AngularTokenLibrary/app/index.php",
 		"/D/Dropbox/Richard/CODING/AngularTokenLibrary/app/template/Head.html",
 		"/D/Dropbox/Richard/CODING/AngularTokenLibrary/app/template/TokenList.html",
@@ -493,8 +918,7 @@
 		"/D/Dropbox/Richard/PFCG/javascript/collections/StatCollection.js",
 		"/D/Dropbox/Richard/PFCG/javascript/models/Stat.js",
 		"/D/Dropbox/Richard/PFCG/javascript/models/Character.js",
-		"/D/Dropbox/Richard/PFCG/javascript/views/DebugBarView.js",
-		"/C/Users/Richard/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings"
+		"/D/Dropbox/Richard/PFCG/javascript/views/DebugBarView.js"
 	],
 	"find":
 	{
@@ -502,7 +926,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 90.0,
 		"where_history":
 		[
 			""
@@ -513,6 +937,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"blah",
+			"formatDate",
+			"formatDate(",
+			"formatDate",
+			"getAllJson",
+			"Controllers/",
 			"jcrop",
 			"newCreature.portraitWidth",
 			"jcrop",
@@ -556,6 +986,8 @@
 		"regex": false,
 		"replace_history":
 		[
+			"bootstrapModelArray",
+			"controllers/",
 			"newCreature.sourceImageUrl",
 			"['",
 			"$_POST",
@@ -573,7 +1005,7 @@
 	"groups":
 	[
 		{
-			"selected": 19,
+			"selected": 41,
 			"sheets":
 			[
 				{
@@ -581,15 +1013,15 @@
 					"file": "javascript/app/models/Quest.js",
 					"settings":
 					{
-						"buffer_size": 1277,
+						"buffer_size": 1018,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1272,
-								1272
+								0,
+								0
 							]
 						],
 						"settings":
@@ -598,7 +1030,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 135.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -608,15 +1040,15 @@
 					"file": "javascript/app/models/Loot.js",
 					"settings":
 					{
-						"buffer_size": 157,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								152,
-								152
+								0,
+								0
 							]
 						],
 						"settings":
@@ -634,15 +1066,15 @@
 					"file": "javascript/app/collections/LootCollection.js",
 					"settings":
 					{
-						"buffer_size": 131,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								131,
-								131
+								0,
+								0
 							]
 						],
 						"settings":
@@ -660,14 +1092,14 @@
 					"file": "javascript/app/views/LootView.js",
 					"settings":
 					{
-						"buffer_size": 153,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								153,
+								0,
 								0
 							]
 						],
@@ -683,89 +1115,10 @@
 				},
 				{
 					"buffer": 4,
-					"file": "javascript/app/models/EncounterLicense.js",
+					"file": "javascript/app/views/GuildView.js",
 					"settings":
 					{
-						"buffer_size": 196,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								191,
-								191
-							]
-						],
-						"settings":
-						{
-							"auto_name": "var EncounterLicense = Backbone.RelationalModel.ex",
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "javascript/app/collections/EncounterLicenseCollection.js",
-					"settings":
-					{
-						"buffer_size": 161,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								161,
-								161
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "javascript/app/models/QuestLicense.js",
-					"settings":
-					{
-						"buffer_size": 189,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								184,
-								184
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "javascript/app/collections/QuestLicenseCollection.js",
-					"settings":
-					{
-						"buffer_size": 149,
+						"buffer_size": 1098,
 						"regions":
 						{
 						},
@@ -773,84 +1126,6 @@
 						[
 							[
 								0,
-								149
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "javascript/app/collections/GuildMembershipCollection.js",
-					"settings":
-					{
-						"buffer_size": 155,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								150,
-								150
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "javascript/app/models/GuildMembership.js",
-					"settings":
-					{
-						"buffer_size": 192,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								187,
-								187
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "javascript/app/views/EncounterView.js",
-					"settings":
-					{
-						"buffer_size": 3692,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								85,
 								0
 							]
 						],
@@ -867,99 +1142,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 11,
-					"file": "javascript/app/models/GuildCharter.js",
+					"buffer": 5,
+					"file": "javascript/app/views/QuestView.js",
 					"settings":
 					{
-						"buffer_size": 184,
+						"buffer_size": 1437,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								179,
-								179
-							]
-						],
-						"settings":
-						{
-							"auto_name": "",
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "javascript/app/collections/GuildCharterCollection.js",
-					"settings":
-					{
-						"buffer_size": 149,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								143,
-								143
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 13,
-					"file": "javascript/app/models/Adventurer.js",
-					"settings":
-					{
-						"buffer_size": 1909,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1905,
-								1840
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 765.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 14,
-					"file": "javascript/app/views/AdventurerView.js",
-					"settings":
-					{
-						"buffer_size": 2547,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								174,
-								174
+								494,
+								494
 							]
 						],
 						"settings":
@@ -975,24 +1170,265 @@
 					"type": "text"
 				},
 				{
-					"buffer": 15,
-					"file": "javascript/app/models/Encounter.js",
+					"buffer": 6,
+					"file": "javascript/app/views/QuestCollectionView.js",
 					"settings":
 					{
-						"buffer_size": 1024,
+						"buffer_size": 1646,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								611,
-								611
+								540,
+								540
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "javascript/app/models/EncounterLicense.js",
+					"settings":
+					{
+						"buffer_size": 195,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_name": "var EncounterLicense = Backbone.RelationalModel.ex",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "javascript/app/models/EncounterType.js",
+					"settings":
+					{
+						"buffer_size": 104,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_name": "var CQ.EncounterType = Backbone.Model.extend({",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "javascript/app/collections/EncounterTypeCollection.js",
+					"settings":
+					{
+						"buffer_size": 157,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								153,
+								153
+							]
+						],
+						"settings":
+						{
+							"auto_name": "CQ.EncounterTypeCollection = Backbone.Collection.e",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "javascript/app/collections/EncounterLicenseCollection.js",
+					"settings":
+					{
+						"buffer_size": 163,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								72,
+								72
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "javascript/app/models/QuestLicense.js",
+					"settings":
+					{
+						"buffer_size": 188,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "javascript/app/collections/QuestLicenseCollection.js",
+					"settings":
+					{
+						"buffer_size": 151,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								68,
+								68
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 45.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "javascript/app/collections/GuildMembershipCollection.js",
+					"settings":
+					{
+						"buffer_size": 160,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								71,
+								71
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "javascript/app/models/GuildMembership.js",
+					"settings":
+					{
+						"buffer_size": 191,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "javascript/app/views/EncounterView.js",
+					"settings":
+					{
+						"buffer_size": 3891,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								685,
+								691
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1002,22 +1438,70 @@
 				},
 				{
 					"buffer": 16,
-					"file": "javascript/app/models/Guild.js",
 					"settings":
 					{
-						"buffer_size": 952,
+						"buffer_size": 679,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										174,
+										184
+									],
+									[
+										481,
+										485
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								483,
+								483
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"output_tag": 3,
+							"result_base_dir": "",
+							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 210.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 17,
+					"file": "javascript/app/models/GuildCharter.js",
+					"settings":
+					{
+						"buffer_size": 183,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								594,
-								594
+								0,
+								0
 							]
 						],
 						"settings":
 						{
+							"auto_name": "",
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -1027,47 +1511,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 17,
-					"file": "test.html",
-					"settings":
-					{
-						"buffer_size": 5181,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5036,
-								5036
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 720.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
 					"buffer": 18,
-					"file": "javascript/app/app.js",
+					"file": "javascript/app/collections/GuildCharterCollection.js",
 					"settings":
 					{
-						"buffer_size": 5185,
+						"buffer_size": 151,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1107,
-								1107
+								68,
+								68
 							]
 						],
 						"settings":
@@ -1082,6 +1538,195 @@
 				},
 				{
 					"buffer": 19,
+					"file": "javascript/app/models/Adventurer.js",
+					"settings":
+					{
+						"buffer_size": 1730,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 20,
+					"file": "javascript/app/views/AdventurerView.js",
+					"settings":
+					{
+						"buffer_size": 2718,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3,
+								3
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 21,
+					"file": "javascript/app/models/Encounter.js",
+					"settings":
+					{
+						"buffer_size": 1000,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								800,
+								697
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 22,
+					"file": "javascript/app/models/Guild.js",
+					"settings":
+					{
+						"buffer_size": 733,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 23,
+					"file": "test.php",
+					"settings":
+					{
+						"buffer_size": 8212,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5275,
+								5275
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1710.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 24,
+					"settings":
+					{
+						"buffer_size": 10285,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								10285
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 25,
+					"file": "javascript/app/app.js",
+					"settings":
+					{
+						"buffer_size": 363,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								363,
+								363
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 26,
 					"file": "TODO.txt",
 					"settings":
 					{
@@ -1104,6 +1749,1166 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 27,
+					"file": "javascript/app/views/GuildCollectionView.js",
+					"settings":
+					{
+						"buffer_size": 1498,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								77,
+								77
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 28,
+					"file": "javascript/app/collections/GuildCollection.js",
+					"settings":
+					{
+						"buffer_size": 130,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								61,
+								61
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 29,
+					"file": "javascript/app/collections/QuestCollection.js",
+					"settings":
+					{
+						"buffer_size": 130,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								61,
+								61
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 30,
+					"file": "javascript/app/collections/XpCollection.js",
+					"settings":
+					{
+						"buffer_size": 122,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3,
+								3
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 31,
+					"file": "javascript/app/views/AchievementAdventurerView.js",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 32,
+					"file": "javascript/app/views/AchievementView.js",
+					"settings":
+					{
+						"buffer_size": 3065,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1564,
+								1564
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 180.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 33,
+					"settings":
+					{
+						"buffer_size": 3836,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								636,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 34,
+					"file": "javascript/app/models/Achievement.js",
+					"settings":
+					{
+						"buffer_size": 496,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 35,
+					"file": "javascript/app/views/AdventurerPickerView.js",
+					"settings":
+					{
+						"buffer_size": 589,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								589
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 36,
+					"file": "javascript/app/views/EncounterTypePickerView.js",
+					"settings":
+					{
+						"buffer_size": 573,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								494,
+								494
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 37,
+					"file": "javascript/app/views/SampleView.js",
+					"settings":
+					{
+						"buffer_size": 3857,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2616,
+								2616
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 38,
+					"file": "javascript/app/models/Sample.js",
+					"settings":
+					{
+						"buffer_size": 1571,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 39,
+					"file": "javascript/app/views/AchievementCertificateView.js",
+					"settings":
+					{
+						"buffer_size": 1287,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								72,
+								72
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 40,
+					"file": ".gitignore",
+					"settings":
+					{
+						"buffer_size": 641,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								640,
+								640
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 41,
+					"file": "api/controllers/Controller.class.php",
+					"settings":
+					{
+						"buffer_size": 1553,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								436,
+								436
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 42,
+					"file": "api/models/EncounterType.class.php",
+					"settings":
+					{
+						"buffer_size": 1221,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								879,
+								879
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 43,
+					"file": "api/models/EncounterLicense.class.php",
+					"settings":
+					{
+						"buffer_size": 1265,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								922,
+								922
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 44,
+					"file": "api/models/GuildCharter.class.php",
+					"settings":
+					{
+						"buffer_size": 1218,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								879,
+								879
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 135.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 45,
+					"file": "api/models/GuildMembership.class.php",
+					"settings":
+					{
+						"buffer_size": 1287,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								943,
+								943
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 46,
+					"file": "api/models/QuestLicense.class.php",
+					"settings":
+					{
+						"buffer_size": 1273,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								927,
+								927
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 47,
+					"file": "api/models/Xp.class.php",
+					"settings":
+					{
+						"buffer_size": 2561,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1718,
+								1718
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 630.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 48,
+					"file": "javascript/app/models/AchievementCertificate.js",
+					"settings":
+					{
+						"buffer_size": 333,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								226,
+								226
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 49,
+					"file": "javascript/app/models/Xp.js",
+					"settings":
+					{
+						"buffer_size": 659,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								579,
+								579
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 50,
+					"file": "javascript/app/collections/SampleCollection.js",
+					"settings":
+					{
+						"buffer_size": 118,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								62,
+								62
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 51,
+					"file": "javascript/app/collections/EncounterCollection.js",
+					"settings":
+					{
+						"buffer_size": 142,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								65,
+								65
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 52,
+					"file": "javascript/app/collections/AdventurerCollection.js",
+					"settings":
+					{
+						"buffer_size": 145,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								66,
+								66
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 53,
+					"file": "javascript/app/collections/AchievementCollection.js",
+					"settings":
+					{
+						"buffer_size": 148,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								67,
+								67
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 54,
+					"file": "javascript/app/collections/AchievementCertificateCollection.js",
+					"settings":
+					{
+						"buffer_size": 181,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								78,
+								78
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 55,
+					"file": "javascript/app/views/XpView.js",
+					"settings":
+					{
+						"buffer_size": 45,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 56,
+					"file": "javascript/app/views/XpCollectionView.js",
+					"settings":
+					{
+						"buffer_size": 175,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								95,
+								95
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 57,
+					"file": "javascript/app/views/EncounterXpView.js",
+					"settings":
+					{
+						"buffer_size": 1640,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								61,
+								61
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 58,
+					"file": "javascript/app/views/EncounterCollectionView.js",
+					"settings":
+					{
+						"buffer_size": 1450,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								85,
+								85
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 59,
+					"file": "javascript/app/views/AdventurerCollectionView.js",
+					"settings":
+					{
+						"buffer_size": 1905,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1318,
+								1318
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 315.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 60,
+					"file": "javascript/app/views/AchievementCollectionView.js",
+					"settings":
+					{
+						"buffer_size": 1648,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								89,
+								89
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 61,
+					"file": "api/models/Model.class.php",
+					"settings":
+					{
+						"buffer_size": 5086,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4211,
+								4211
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1440.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 62,
+					"file": "api/models/AchievementCertificate.class.php",
+					"settings":
+					{
+						"buffer_size": 1829,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1377,
+								1377
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 63,
+					"file": "api/utilities.php",
+					"settings":
+					{
+						"buffer_size": 3141,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								606,
+								606
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1035.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 64,
+					"file": "api/models/Encounter.class.php",
+					"settings":
+					{
+						"buffer_size": 2478,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1808,
+								1852
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 630.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 65,
+					"file": "api/database.php",
+					"settings":
+					{
+						"buffer_size": 3730,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1708,
+								1708
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 450.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 66,
+					"file": "api/models/Adventurer.class.php",
+					"settings":
+					{
+						"buffer_size": 3150,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2620,
+								2620
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 900.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 67,
+					"file": "api/models/Achievement.class.php",
+					"settings":
+					{
+						"buffer_size": 1336,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1019,
+								1019
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 68,
+					"file": "api/models/Guild.class.php",
+					"settings":
+					{
+						"buffer_size": 1606,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1246,
+								1246
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 69,
+					"file": "api/models/Quest.class.php",
+					"settings":
+					{
+						"buffer_size": 1821,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1432,
+								1432
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 270.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1167,6 +2972,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 237.0,
+	"side_bar_width": 274.0,
 	"status_bar_visible": true
 }

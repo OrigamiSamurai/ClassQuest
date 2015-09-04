@@ -1,4 +1,4 @@
-CQ.GuildCollectionView = Backbone.Epoxy.View.extend({
+CQ.Views.GuildCollectionView = Backbone.Epoxy.View.extend({
 
 	el: '#GuildContainer',
 
@@ -28,7 +28,7 @@ CQ.GuildCollectionView = Backbone.Epoxy.View.extend({
 	},
 
 	renderGuild: function(guild) {
-		var guildView = new CQ.GuildView({model:guild});
+		var guildView = new CQ.Views.GuildView({model:guild});
 		this.$el.append(guildView.render().$el);
 	},
 
@@ -41,7 +41,7 @@ CQ.GuildCollectionView = Backbone.Epoxy.View.extend({
 	},
 
 	onSubmit: function() {
-		var guild = new CQ.Guild({
+		var guild = new CQ.Models.Guild({
 			name:$('#NewGuildName').val(),
 		});
 		guild.save({}, {
@@ -53,7 +53,6 @@ CQ.GuildCollectionView = Backbone.Epoxy.View.extend({
 	save: function() {
     this.model.save({}, {
 	    success: function (model, response, options) {
-          //model.set({updatedDate:response.updatedDate});
 	    },
 	    error: function (model, xhr, options) {
 	        console.log("Something went wrong while saving the model");

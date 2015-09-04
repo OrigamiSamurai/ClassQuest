@@ -1,5 +1,5 @@
-CQ.AdventurerView = Backbone.Epoxy.View.extend({
-	model: CQ.Adventurer,
+CQ.Views.AdventurerView = Backbone.Epoxy.View.extend({
+	model: CQ.Models.Adventurer,
 
   tagname: "li",
 
@@ -61,22 +61,22 @@ CQ.AdventurerView = Backbone.Epoxy.View.extend({
   },
 
   renderQuest: function(model) {
-	var adventurerXpView = new CQ.EncounterXpView({model:model});
+	var adventurerXpView = new CQ.Views.EncounterXpView({model:model});
 	this.$el.find('.adventurerQuests').append(adventurerQuestView.render().$el);
   },
 
   renderXp: function(model) {
-	var adventurerXpView = new CQ.EncounterXpView({model:model});
+	var adventurerXpView = new CQ.Views.EncounterXpView({model:model});
 	this.$el.find('.adventurerXps').append(adventurerXpView.render().$el);
   },
 
   renderGuild: function(model) {
-	var adventurerXpView = new CQ.EncounterXpView({model:model});
+	var adventurerXpView = new CQ.Views.EncounterXpView({model:model});
 	this.$el.find('.adventurerGuilds').append(adventurerGuildView.render().$el);
   },
 
   renderAchievement: function(model) {
-	var adventurerXpView = new CQ.EncounterXpView({model:model});
+	var adventurerXpView = new CQ.Views.EncounterXpView({model:model});
 	this.$el.find('.adventurerAchievements').append(adventurerAchievementView.render().$el);
   },
 

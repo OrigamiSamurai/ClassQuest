@@ -1,4 +1,4 @@
-CQ.AchievementCollectionView = Backbone.Epoxy.View.extend({
+CQ.Views.AchievementCollectionView = Backbone.Epoxy.View.extend({
 
 	el: '#AchievementContainer',
 
@@ -28,7 +28,7 @@ CQ.AchievementCollectionView = Backbone.Epoxy.View.extend({
 	},
 
 	renderAchievement: function(achievement) {
-		var achievementView = new CQ.AchievementView({model:achievement});
+		var achievementView = new CQ.Views.AchievementView({model:achievement});
 		this.$el.append(achievementView.render().$el);
 	},
 
@@ -41,7 +41,7 @@ CQ.AchievementCollectionView = Backbone.Epoxy.View.extend({
 	},
 
 	onSubmit: function() {
-		var achievement = new CQ.Achievement({
+		var achievement = new CQ.Models.Achievement({
 			name:$('#NewAchievementName').val(),
 		});
 		achievement.save({}, {

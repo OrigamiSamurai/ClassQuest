@@ -1,5 +1,5 @@
-CQ.EncounterView = Backbone.Epoxy.View.extend({
-	model: CQ.Encounter,
+CQ.Views.EncounterView = Backbone.Epoxy.View.extend({
+	model: CQ.Models.Encounter,
 
   tagname: "li",
 
@@ -14,11 +14,11 @@ CQ.EncounterView = Backbone.Epoxy.View.extend({
     prettyDate: {
       deps: ['encounterDate'],
       get: function (encounterDate) {
-        return encounterDate.getMonth()+'/'+encounterDate.getDate()+'/'+encounterDate.getFullYear();
+        return (encounterDate.getMonth()+1)+'/'+encounterDate.getDate()+'/'+encounterDate.getFullYear();
       },
       set: function (value) {
-        if (isNaN(Date.parse($('.date').val()))) {
-          alert('this aint a properly formatted date, shithead', $('.date').val() );
+        if (isNaN(Date.parse(this.$el.find('.date').val()))) {
+          alert('Invalid date format:', this.$el.find('.date').val() );
         }
         else {
           this.setBinding('encounterDate', new Date(Date.parse(this.$el.find('.date').val())));  
@@ -73,12 +73,12 @@ CQ.EncounterView = Backbone.Epoxy.View.extend({
   },
 
   renderAdventurerPicker: function() {
-    var adventurerPicker = new CQ.AdventurerPickerView({el:this.$el.find('.adventurerPicker'),model:CQ.adventurers})
+    var adventurerPicker = new CQ.Views.AdventurerPickerView({el:this.$el.find('.adventurerPicker'),model:CQ.adventurers})
     adventurerPicker.render();
   },
 
   renderEncounterTypePicker: function() {
-    var encounterTypePicker = new CQ.EncounterTypePickerView({el:this.$el.find('.type'),model:CQ.encounterTypes})
+    var encounterTypePicker = new CQ.Views.EncounterTypePickerView({el:this.$el.find('.type'),model:CQ.encounterTypes})
     encounterTypePicker.render();
   },
 
@@ -88,7 +88,7 @@ CQ.EncounterView = Backbone.Epoxy.View.extend({
 
   onXpSubmit: function() {
     var myAdventurer = CQ.adventurers.get(this.$el.find('.adventurerPicker')[0].value);
-    var xp = new CQ.Xp({amount:parseInt(this.$el.find('.amount').val()), typeId: this.model.typeId, encounter:this.model, adventurer:myAdventurer});
+    var xp = new CQ.Models.Xp({amount:parseInt(this.$el.find('.amount').val()), typeId: this.model.typeId, encounter:this.model, adventurer:myAdventurer});
     xp.save({}, {
 	    success: this.onCreated,
 	    error: this.onError
@@ -104,7 +104,7 @@ CQ.EncounterView = Backbone.Epoxy.View.extend({
 	},
 
   renderXp: function(model) {
-    var encounterXpView = new CQ.EncounterXpView({model:model});
+    var encounterXpView = new CQ.Views.EncounterXpView({model:model});
     this.$el.find('.encounterXpContainer').append(encounterXpView.render().$el);
   },
 

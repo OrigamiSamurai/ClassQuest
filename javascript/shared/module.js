@@ -1,0 +1,4 @@
+window.CQ = {
+	Collections: {},
+	Models: {},
+}

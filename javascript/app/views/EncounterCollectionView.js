@@ -1,4 +1,4 @@
-CQ.EncounterCollectionView = Backbone.Epoxy.View.extend({
+CQ.Views.EncounterCollectionView = Backbone.Epoxy.View.extend({
 
 	el: '#EncounterContainer',
 
@@ -15,15 +15,27 @@ CQ.EncounterCollectionView = Backbone.Epoxy.View.extend({
 	},
 
 	render: function() {
-		this.$el.html("<input type=\"button\" id=\"CreateEncounter\" value=\"Create Encounter\" />"+
-			"<br>Name <input type=\"text\" id=\"NewEncounterName\">");
+		this.$el.html(
+			"Name <input type=\"text\" id=\"NewEncounterName\">"+
+			"Type <select class=\"encounterTypePicker\"></select>"+
+			"Max XP <input type=\"text\" id=\"NewEncounterMaxXp\">"+
+			"Encountered Date: <input type=\"text\" class=\"date\">"+
+			"<input type=\"button\" id=\"CreateEncounter\" value=\"Create Encounter\" />"
+			);
+
+		this.renderEncounterTypePicker();
 		this.model.forEach(this.renderEncounter)
 		
 		return this;
 	},
 
+	renderEncounterTypePicker: function() {
+		var encounterTypePicker = new CQ.Views.EncounterTypePickerView({el:this.$el.find('.encounterTypePicker'),model:CQ.encounterTypes})
+		encounterTypePicker.render();
+	},
+
 	renderEncounter: function(encounter) {
-		var encounterView = new CQ.EncounterView({model:encounter});
+		var encounterView = new CQ.Views.EncounterView({model:encounter});
 		this.$el.append(encounterView.render().$el);
 	},
 
@@ -36,7 +48,13 @@ CQ.EncounterCollectionView = Backbone.Epoxy.View.extend({
 	},
 
 	onSubmit: function() {
-		var encounter = new CQ.Encounter({name:$('#NewEncounterName').val()});
+		var encounter = new CQ.Models.Encounter({
+			name:$('#NewEncounterName').val(),
+			typeId: parseInt($('.encounterTypePicker').val()),
+			maxXp: parseInt($('#NewEncounterMaxXp').val()),
+			encounterDate: new Date($('.date').val())
+			});
+		console.log(encounter);
 		encounter.save({}, {
 			success: this.onCreated,
 			error: this.onError

@@ -1,5 +1,5 @@
-CQ.SampleView = Backbone.Epoxy.View.extend({
-	model: CQ.Achievement,
+CQ.Views.SampleView = Backbone.Epoxy.View.extend({
+	model: CQ.Models.Achievement,
 
 	// If it will be repeated, use tagname
   	tagname: "li",
@@ -65,7 +65,7 @@ CQ.SampleView = Backbone.Epoxy.View.extend({
   },
 
   renderCertificate: function(achievementCertificate) {
-    var achievementCertificateView = new CQ.AchievementCertificateView({model:achievementCertificate, collection:this.model.attributes.achievementCertificates});
+    var achievementCertificateView = new CQ.Views.AchievementCertificateView({model:achievementCertificate, collection:this.model.attributes.achievementCertificates});
     this.$el.find('.achievementCertificates').append(achievementCertificateView.render().$el);
   },
 

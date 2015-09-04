@@ -1,7 +1,7 @@
-CQ.QuestView = Backbone.Epoxy.View.extend({
-	model: CQ.Quest,
+CQ.Views.QuestView = Backbone.Epoxy.View.extend({
+	model: CQ.Models.Quest,
 
-  tagname: "li",
+  el: "#QuestContainer",
 
 	initialize: function(options){
 
@@ -9,6 +9,8 @@ CQ.QuestView = Backbone.Epoxy.View.extend({
     this.model.bind('reset', this.render);
 
     this.attr = this.model.attributes;
+    
+    this.render();
   },
 
   bindings: {
@@ -28,7 +30,7 @@ CQ.QuestView = Backbone.Epoxy.View.extend({
       "<input type=\"button\" value=\"Save\" class=\"saveButton\" />"+
     	"<input type=\"button\" value=\"Delete\" class=\"deleteButton\" />"+
       "<br>Encounters:"+
-      "<div class=\"questEncounters\">"+
+      "<div id=\"EncounterLicenseContainer\">"+
       "</div>"+
       "<br>Guilds:"+
       "<div class=\"questGuilds\">"+
@@ -50,7 +52,6 @@ CQ.QuestView = Backbone.Epoxy.View.extend({
 	save: function() {
     this.model.save({}, {
 	    success: function (model, response, options) {
-          //model.set({updatedDate:response.updatedDate});
 	    },
 	    error: function (model, xhr, options) {
 	        console.log("Something went wrong while saving the model");

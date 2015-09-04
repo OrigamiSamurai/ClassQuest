@@ -1,4 +1,4 @@
-CQ.Quest = Backbone.RelationalModel.extend({
+CQ.Models.Quest = Backbone.RelationalModel.extend({
 	defaults: {
 		name: '',
 		guildCharters: [],
@@ -10,9 +10,9 @@ CQ.Quest = Backbone.RelationalModel.extend({
 		{
 			type: Backbone.HasMany,
 			key: 'guildCharters',
-			relatedModel: 'CQ.GuildCharter',
+			relatedModel: 'CQ.Models.GuildCharter',
 			includeInJSON: 'id',
-			collectionType: 'CQ.GuildCharterCollection',
+			collectionType: 'CQ.Collections.GuildCharterCollection',
 			//autoFetch: true,
 			reverseRelation: {
 				key: 'quest',
@@ -22,9 +22,9 @@ CQ.Quest = Backbone.RelationalModel.extend({
 		{
 			type: Backbone.HasMany,
 			key: 'questLicenses',
-			relatedModel: 'CQ.QuestLicense',
+			relatedModel: 'CQ.Models.QuestLicense',
 			includeInJSON: 'id',
-			collectionType: 'CQ.QuestLicenseCollection',
+			collectionType: 'CQ.Collections.QuestLicenseCollection',
 			//autoFetch: true,
 			reverseRelation: {
 				key: 'quest',
@@ -34,9 +34,9 @@ CQ.Quest = Backbone.RelationalModel.extend({
 		{
 			type: Backbone.HasMany,
 			key: 'encounterLicenses',
-			relatedModel: 'CQ.EncounterLicense',
+			relatedModel: 'CQ.Models.EncounterLicense',
 			includeInJSON: 'id',
-			collectionType: 'CQ.EncounterLicenseCollection',
+			collectionType: 'CQ.Collections.EncounterLicenseCollection',
 			//autoFetch: true,
 			reverseRelation: {
 				key: 'quest',

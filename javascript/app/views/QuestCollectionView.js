@@ -1,6 +1,6 @@
-CQ.QuestCollectionView = Backbone.Epoxy.View.extend({
+CQ.Views.QuestCollectionView = Backbone.Epoxy.View.extend({
 
-	el: '#QuestContainer',
+	el: '#QuestsContainer',
 
 	initialize: function() {
     _.bindAll(this, 'render', 'renderQuest', 'onSubmit', 'onCreated', 'onError');// onsubmits are currently used for saving lower level items
@@ -20,9 +20,10 @@ CQ.QuestCollectionView = Backbone.Epoxy.View.extend({
 	},
 
 	render: function() {
-		this.$el.html("<input type=\"button\" id=\"CreateQuest\" value=\"Create Quest\" />"+
-			"<br>Period: <input type=\"text\" id=\"NewQuestPeriod\">"+
-			"<br>Name: <input type=\"text\" id=\"NewQuestName\">"
+		this.$el.html(
+			"Period: <input type=\"text\" id=\"NewQuestPeriod\">"+
+			"Name: <input type=\"text\" id=\"NewQuestName\">"+
+			"<input type=\"button\" id=\"CreateQuest\" value=\"Create Quest\" />"
 			);
 		this.applyBindings();
 		this.model.forEach(this.renderQuest)
@@ -30,7 +31,7 @@ CQ.QuestCollectionView = Backbone.Epoxy.View.extend({
 	},
 
 	renderQuest: function(quest) {
-		var questView = new CQ.QuestView({model:quest});
+		var questView = new CQ.Views.QuestCollectionQuestView({model:quest});
 		this.$el.append(questView.render().$el);
 	},
 
@@ -43,7 +44,7 @@ CQ.QuestCollectionView = Backbone.Epoxy.View.extend({
 	},
 
 	onSubmit: function() {
-		var quest = new CQ.Quest({
+		var quest = new CQ.Models.Quest({
 			name:$('#NewQuestName').val(),
 			period:$('#NewQuestPeriod').val()
 		});
@@ -56,7 +57,6 @@ CQ.QuestCollectionView = Backbone.Epoxy.View.extend({
 	save: function() {
     this.model.save({}, {
 	    success: function (model, response, options) {
-          //model.set({updatedDate:response.updatedDate});
 	    },
 	    error: function (model, xhr, options) {
 	        console.log("Something went wrong while saving the model");

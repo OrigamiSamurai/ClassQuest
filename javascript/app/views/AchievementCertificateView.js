@@ -1,5 +1,5 @@
-CQ.AchievementCertificateView = Backbone.Epoxy.View.extend({
-	model: CQ.AchievementCertificate,
+CQ.Views.AchievementCertificateView = Backbone.Epoxy.View.extend({
+	model: CQ.Models.AchievementCertificate,
 
 	initialize: function(options){
 

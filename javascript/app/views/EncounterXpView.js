@@ -1,5 +1,5 @@
-CQ.EncounterXpView = Backbone.Epoxy.View.extend({
-	model: CQ.Xp,
+CQ.Views.EncounterXpView = Backbone.Epoxy.View.extend({
+	model: CQ.Models.Xp,
 
 	tagname: 'li',
 

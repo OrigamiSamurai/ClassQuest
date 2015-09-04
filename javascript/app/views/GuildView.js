@@ -1,5 +1,5 @@
-CQ.GuildView = Backbone.Epoxy.View.extend({
-	model: CQ.Guild,
+CQ.Views.GuildView = Backbone.Epoxy.View.extend({
+	model: CQ.Models.Guild,
 
   tagname: "li",
 

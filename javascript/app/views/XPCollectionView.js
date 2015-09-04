@@ -1,5 +1,5 @@
-CQ.XpCollectionView = Backbone.View.extend({
-	collection: CQ.XpCollection,
+CQ.Views.XpCollectionView = Backbone.View.extend({
+	collection: CQ.Collections.XpCollection,
 
 	el: '#XpContainer',
 
